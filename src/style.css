@@ -39,7 +39,7 @@ button:focus {
 }
 
 #preloader-none {
-  opacity: 0;
+  opacity: 10;
 }
 
 #no-scroll {

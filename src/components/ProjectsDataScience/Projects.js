@@ -1,5 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import leaf from "../../Assets/Projects/leaf.png";
@@ -9,7 +11,9 @@ import chatify from "../../Assets/Projects/chatify.png";
 import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
 
-function Projects() {
+import Card from "react-bootstrap/Card";
+
+function ProjectsDataScience() {
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -88,9 +92,16 @@ function Projects() {
             />
           </Col>
         </Row>
+        <Card className="project-card-view">
+          <Card.Body>
+              <Link to="/projectlist">
+                  <Button variant="primary">Back</Button>
+              </Link>
+          </Card.Body>
+        </Card>
       </Container>
     </Container>
   );
 }
 
-export default Projects;
+export default ProjectsDataScience;
