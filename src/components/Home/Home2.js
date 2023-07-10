@@ -18,37 +18,17 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+            I'm an aerospace engineering graduate with a passion for data processing, visualization, and data science.
+            <br />
+            <br />
+             With a creative and analytical mindset, I love exploring the world of data and transforming complex information into visually appealing and meaningful insights.
               <br />
-              <br />I am fluent in classics like
-              <i>
-                <b className="purple"> C++, Javascript and Go. </b>
-              </i>
-              <br />
-              <br />
-              My field of Interest's are building new &nbsp;
-              <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
-                <b className="purple">
-                  Blockchain.
-                </b>
-              </i>
+              <br />As you browse through my portfolio, you'll find a collection of my projects that showcase my versatility and dedication to data-driven problem-solving. Whether it's exploring vast datasets, applying statistical models, or creating intuitive user interfaces,
+            <br />
+            <br />
+              I am always eager to take on new challenges and collaborate with others to unlock the potential of data.
               <br />
               <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
-              <i>
-                <b className="purple">
-                  {" "}
-                  Modern Javascript Library and Frameworks
-                </b>
-              </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> React.js and Next.js</b>
-              </i>
             </p>
           </Col>
           <Col md={4} className="myAvtar">
