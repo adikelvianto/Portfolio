@@ -7,7 +7,6 @@ import ProjectsDataViz from "./components/ProjectsDataViz/Projects";
 import ProjectsDataScience from "./components/ProjectsDataScience/Projects";
 import ProjectsBackEnd from "./components/ProjectsBackEnd/Projects";
 import Footer from "./components/Footer";
-import Resume from "./components/Resume/ResumeNew";
 import ProjectList from "./components/ProjectList/Projects";
 import {
   BrowserRouter as Router,
@@ -44,7 +43,6 @@ function App() {
           <Route path="/project_backend" element={<ProjectsBackEnd />} />
           <Route path="/projectlist" element={<ProjectList />} />
           <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />
