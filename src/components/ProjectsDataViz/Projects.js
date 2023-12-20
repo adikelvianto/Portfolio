@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
 import editor from "../../Assets/Projects/codeEditor.png";
 import chatify from "../../Assets/Projects/chatify.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
@@ -19,46 +18,49 @@ function ProjectsDataViz() {
         <h1 className="project-heading">
           <strong className="purple">Data Processing and Visualization</strong>
         </h1>
+        <p style={{ color: "white" }}>
+          Here are a few projects I've worked on recently.
+        </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={chatify}
-              isBlog={false}
+              hasDemo={true}
+              hasGithub={false}
+              hasDetails={true}
               title="Aircraft Transmission Monitoring"
+              date="November 2023"
               description="Dashboard to monitor aircraft transmission status"
               demoLink="https://bit.ly/AircraftTransmissonDummy"
+              link="/project_dataviz/details_1"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={bitsOfCode}
-              isBlog={false}
+              hasDemo={true}
+              hasGithub={false}
+              hasDetails={true}
               title="Repetitive Project Accomplishment Monitoring"
+              date="September 2023"
               description="Dashboard to monitor several repetitive projects"
               demoLink="https://bit.ly/RepetitivePICADummy"
+              link="/project_dataviz/details_1"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={editor}
-              isBlog={false}
+              hasDemo={true}
+              hasGithub={true}
+              hasDetails={true}
               title="Editor.io"
+              date="September 2023"
               description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
               ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              link="/project_dataviz/details_1"            
             />
           </Col>
         </Row>

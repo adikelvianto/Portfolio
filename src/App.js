@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import ProjectsDataViz from "./components/ProjectsDataViz/Projects";
 import ProjectsDataScience from "./components/ProjectsDataScience/Projects";
 import ProjectsBackEnd from "./components/ProjectsBackEnd/Projects";
+import ProjectDataVizDetails1 from "./components/ProjectDataVizDetails1/Projects";
 import Footer from "./components/Footer";
 import ProjectList from "./components/ProjectList/Projects";
 import {
@@ -43,6 +44,7 @@ function App() {
           <Route path="/project_backend" element={<ProjectsBackEnd />} />
           <Route path="/projectlist" element={<ProjectList />} />
           <Route path="/about" element={<About />} />
+          <Route path="/project_dataviz/details_1" element={<ProjectDataVizDetails1 />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />
