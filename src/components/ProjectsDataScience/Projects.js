@@ -7,18 +7,22 @@ import Particle from "../Particle";
 import editor from "../../Assets/Projects/codeEditor.png";
 import chatify from "../../Assets/Projects/chatify.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
+import datascience_icon from "../../Assets/Projects/Data Science Icon.png";
+
 
 function ProjectsDataScience() {
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
+        <h1 className="image-with-text">
           <strong className="purple">Data Science</strong>
+          <img src={datascience_icon} alt="" className="aligned-image" />
         </h1>
-        <p style={{ color: "white" }}>
+        <br></br>
+        <h5 style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
-        </p>
+        </h5>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard

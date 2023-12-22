@@ -7,18 +7,21 @@ import Particle from "../Particle";
 import editor from "../../Assets/Projects/codeEditor.png";
 import chatify from "../../Assets/Projects/chatify.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
+import backend_icon from "../../Assets/Projects/Back End Icon.png";
 
 function ProjectsBackEnd() {
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
-        <strong className="purple">Back End</strong>
+        <h1 className="image-with-text">
+          <strong className="purple">Back End</strong>
+          <img src={backend_icon} alt="" className="aligned-image" />
         </h1>
-        <p style={{ color: "white" }}>
+        <br></br>
+        <h5 style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
-        </p>
+        </h5>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard

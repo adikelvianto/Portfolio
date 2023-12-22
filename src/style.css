@@ -746,3 +746,24 @@ button:focus {
   position: relative;
   z-index: 2;
 }
+
+.image-with-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.aligned-image {
+  margin-left: 10px;
+  max-height: 80px;
+  width: auto;
+}
+
+.aligned-text {
+  margin-right: 10px; /* Adjust the margin for space between text and image */
+  margin: 0;
+}
+
+
