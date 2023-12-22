@@ -741,3 +741,8 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+.back-button {
+  position: relative;
+  z-index: 2;
+}

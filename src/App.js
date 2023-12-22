@@ -7,6 +7,14 @@ import ProjectsDataViz from "./components/ProjectsDataViz/Projects";
 import ProjectsDataScience from "./components/ProjectsDataScience/Projects";
 import ProjectsBackEnd from "./components/ProjectsBackEnd/Projects";
 import ProjectDataVizDetails1 from "./components/ProjectDataVizDetails1/Projects";
+import ProjectDataVizDetails2 from "./components/ProjectDataVizDetails2/Projects";
+import ProjectDataVizDetails3 from "./components/ProjectDataVizDetails3/Projects";
+import ProjectDataSciDetails1 from "./components/ProjectDataSciDetails1/Projects";
+import ProjectDataSciDetails2 from "./components/ProjectDataSciDetails2/Projects";
+import ProjectDataSciDetails3 from "./components/ProjectDataSciDetails3/Projects";
+import ProjectBackEndDetails1 from "./components/ProjectBackEndDetails1/Projects";
+import ProjectBackEndDetails2 from "./components/ProjectBackEndDetails2/Projects";
+import ProjectBackEndDetails3 from "./components/ProjectBackEndDetails3/Projects";
 import Footer from "./components/Footer";
 import ProjectList from "./components/ProjectList/Projects";
 import {
@@ -45,6 +53,14 @@ function App() {
           <Route path="/projectlist" element={<ProjectList />} />
           <Route path="/about" element={<About />} />
           <Route path="/project_dataviz/details_1" element={<ProjectDataVizDetails1 />} />
+          <Route path="/project_dataviz/details_2" element={<ProjectDataVizDetails2 />} />
+          <Route path="/project_dataviz/details_3" element={<ProjectDataVizDetails3 />} />
+          <Route path="/project_datasci/details_1" element={<ProjectDataSciDetails1 />} />
+          <Route path="/project_datasci/details_2" element={<ProjectDataSciDetails2 />} />
+          <Route path="/project_datasci/details_3" element={<ProjectDataSciDetails3 />} />
+          <Route path="/project_backend/details_1" element={<ProjectBackEndDetails1 />} />
+          <Route path="/project_backend/details_2" element={<ProjectBackEndDetails2 />} />
+          <Route path="/project_backend/details_3" element={<ProjectBackEndDetails3 />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />

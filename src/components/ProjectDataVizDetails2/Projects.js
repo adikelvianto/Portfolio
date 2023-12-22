@@ -10,7 +10,7 @@ function ProjectList() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          <strong className="purple">Project 1</strong>
+          <strong className="purple">Project 2</strong>
         </h1>
         <p style={{ color: "white" }}>
           Projects are based on categories, click show more for details

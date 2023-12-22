@@ -25,7 +25,7 @@ function ProjectList() {
           </p>
           </Col>
         </Row>
-        <Link to="/project_dataviz" className="back-button">
+        <Link to="/project_backend" className="back-button">
                   <Button variant="primary">Back</Button>
         </Link>
       </Container>

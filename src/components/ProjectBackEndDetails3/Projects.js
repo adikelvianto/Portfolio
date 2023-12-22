@@ -10,7 +10,7 @@ function ProjectList() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          <strong className="purple">Project 1</strong>
+          <strong className="purple">Project 3</strong>
         </h1>
         <p style={{ color: "white" }}>
           Projects are based on categories, click show more for details
@@ -25,7 +25,7 @@ function ProjectList() {
           </p>
           </Col>
         </Row>
-        <Link to="/project_dataviz" className="back-button">
+        <Link to="/project_backend" className="back-button">
                   <Button variant="primary">Back</Button>
         </Link>
       </Container>

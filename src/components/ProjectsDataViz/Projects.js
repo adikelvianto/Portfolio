@@ -8,8 +8,6 @@ import editor from "../../Assets/Projects/codeEditor.png";
 import chatify from "../../Assets/Projects/chatify.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
 
-import Card from "react-bootstrap/Card";
-
 function ProjectsDataViz() {
   return (
     <Container fluid className="project-section">
@@ -46,7 +44,7 @@ function ProjectsDataViz() {
               date="September 2023"
               description="Dashboard to monitor several repetitive projects"
               demoLink="https://bit.ly/RepetitivePICADummy"
-              link="/project_dataviz/details_1"
+              link="/project_dataviz/details_2"
             />
           </Col>
 
@@ -54,23 +52,19 @@ function ProjectsDataViz() {
             <ProjectCard
               imgPath={editor}
               hasDemo={true}
-              hasGithub={true}
+              hasGithub={false}
               hasDetails={true}
-              title="Editor.io"
-              date="September 2023"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              link="/project_dataviz/details_1"            
+              title="Brazillian E-Commerce"
+              date="November 2023"
+              description="Analysis of brazillian e commerce dataset for year 2018-2022 and dashboard building using Streamlit"
+              demoLink="https://brazillian-e-commerce.streamlit.app/"
+              link="/project_dataviz/details_3"            
             />
           </Col>
         </Row>
-        <Card className="project-card-view">
-          <Card.Body>
-              <Link to="/projectlist">
+              <Link to="/projectlist" className="back-button">
                   <Button variant="primary">Back</Button>
               </Link>
-          </Card.Body>
-        </Card>
       </Container>
     </Container>
   );

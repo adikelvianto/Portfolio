@@ -8,8 +8,6 @@ import editor from "../../Assets/Projects/codeEditor.png";
 import chatify from "../../Assets/Projects/chatify.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
 
-import Card from "react-bootstrap/Card";
-
 function ProjectsBackEnd() {
   return (
     <Container fluid className="project-section">
@@ -30,7 +28,7 @@ function ProjectsBackEnd() {
               hasDemo={true}
               hasGithub={false}
               hasDetails={true}
-              link="/project_dataviz/details_1"
+              link="/project_backend/details_1"
               description="Open Music API - Dicoding Project"
               ghLink="https://github.com/adikelvianto/OpenMusicAPI"
             />
@@ -44,7 +42,7 @@ function ProjectsBackEnd() {
               hasDemo={true}
               hasGithub={false}
               hasDetails={true}
-              link="/project_dataviz/details_1"
+              link="/project_backend/details_2"
               description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
               ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
               demoLink="https://blogs.soumya-jit.tech/"
@@ -59,7 +57,7 @@ function ProjectsBackEnd() {
               hasDemo={true}
               hasGithub={false}
               hasDetails={true}
-              link="/project_dataviz/details_1"
+              link="/project_backend/details_3"
               description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
               ghLink="https://github.com/soumyajit4419/Editor.io"
               demoLink="https://editor.soumya-jit.tech/"              
@@ -68,13 +66,9 @@ function ProjectsBackEnd() {
 
           
         </Row>
-        <Card className="project-card-view">
-          <Card.Body>
-              <Link to="/projectlist">
+        <Link to="/projectlist" className="back-button">
                   <Button variant="primary">Back</Button>
-              </Link>
-          </Card.Body>
-        </Card>
+        </Link>
       </Container>
     </Container>
   );
