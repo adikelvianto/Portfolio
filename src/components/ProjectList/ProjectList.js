@@ -8,7 +8,7 @@ function ProjectList(props) {
     <Card className="project-card-view">
     <Card.Img variant="top" src={props.imgPath} alt="card-img" style={{ width: '200px', margin: '0 auto', display: 'block' }} />
     <Card.Body>
-    <Card.Title><b>{props.title}</b></Card.Title>
+    <Card.Title><strong className="purple">{props.title}</strong></Card.Title>
           <Card.Text style={{ textAlign: "center" }}>
             {props.description}
           </Card.Text>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/MyPicture.png";
+import myImg from "../../Assets/myAvatar.svg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -15,25 +15,27 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              ABOUT <span className="purple"> ME </span>
             </h1>
             <p className="home-about-body">
             I'm an aerospace engineering graduate with a passion for data processing, visualization, and data science.
             <br />
             <br />
              With a creative and analytical mindset, I love exploring the world of data and transforming complex information into visually appealing and meaningful insights.
-              <br />
-              <br />As you browse through my portfolio, you'll find a collection of my projects that showcase my versatility and dedication to data-driven problem-solving. Whether it's exploring vast datasets, applying statistical models, or creating intuitive user interfaces,
+            <br />
+            <br />
+              As you browse through my portfolio, you'll find a collection of my projects that showcase my versatility and dedication to data-driven problem-solving. 
+              Whether it's managing extensive datasets, leveraging machine learning algorithms, and developing intuitive dashboards and user-friendly interfaces,
             <br />
             <br />
               I am always eager to take on new challenges and collaborate with others to unlock the potential of data.
-              <br />
-              <br />
+            <br />
+            <br />
             </p>
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+              <img src={myImg} className="img-fluid" alt="Avatar" />
             </Tilt>
           </Col>
         </Row>
