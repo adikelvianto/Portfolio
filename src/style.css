@@ -2,13 +2,13 @@ html {
   --section-background-color: linear-gradient(
     to bottom left,
     rgba(17, 16, 16, 0.582),
-    rgba(12, 8, 24, 0.904)
+    rgba(1, 29, 77, 0.904)
   );
 
   --image-gradient: linear-gradient(
     to bottom left,
     rgba(17, 16, 16, 0.678),
-    rgba(12, 10, 22, 0.863)
+    rgba(17, 25, 71, 0.863)
   );
 
   --imp-text-color: #756dfb;
@@ -17,6 +17,11 @@ html {
 .purple {
   color: var(--imp-text-color) !important;
 }
+
+.purple-card {
+  color: #7f94e6eb !important;
+}
+
 
 button:focus {
   box-shadow: none !important;
@@ -57,7 +62,7 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #1f2d7d;
+  background: #0e2579;
 }
 
 /* Handle */
@@ -68,7 +73,7 @@ button:focus {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(130, 175, 235, 0.911);
+  background: rgba(130, 158, 235, 0.911);
   border-radius: 12px;
 }
 
@@ -76,7 +81,7 @@ button:focus {
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: #1b1a2ea9 !important;
+  background-color: #1c253aa9 !important;
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
   backdrop-filter: blur(15px) !important;
@@ -194,7 +199,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #7d6af6;
+  background: #6f6af6;
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -406,7 +411,7 @@ button:focus {
 /* Footer */
 /* --------- */
 .footer {
-  background-color: rgb(10, 4, 22);
+  background-color: rgb(20, 32, 68);
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
@@ -511,6 +516,20 @@ button:focus {
   padding-top: 10px !important;
 }
 
+.project-details-heading {
+  color: white !important;
+  font-size: 2.0em !important;
+  font-weight: 500 !important;
+  padding-top: 3px !important;
+}
+
+.project-details-subheading {
+  color: white !important;
+  font-size: 1.1em !important;
+  font-weight: 300 !important;
+  padding-top: 1px !important;
+}
+
 /* --------- */
 /* About */
 /* --------- */
@@ -596,4 +615,17 @@ button:focus {
   margin: 0;
 }
 
-
+.tech-icons-detail {
+  font-size: 3.25em !important;
+  margin: 7.5px !important;
+  padding: 2px !important;
+  opacity: 0.93 !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+  border-radius: 2.5px !important;
+  display: table !important;
+  overflow: hidden !important;
+  transition: all 0.4s ease 0s !important;
+  height: 10px;
+  width: 10px;
+}

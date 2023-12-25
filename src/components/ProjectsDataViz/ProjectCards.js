@@ -11,7 +11,7 @@ function ProjectCards(props) {
     <Card className="project-card-view">
       <Card.Img variant="top" src={props.imgPath} alt="card-img" />
       <Card.Body>
-        <Card.Title><strong>{props.title}</strong></Card.Title>
+        <Card.Title className="purple-card"><strong>{props.title}</strong></Card.Title>
         <Card.Text>{props.date}</Card.Text>
         <br />
         <Card.Text style={{ textAlign: "justify" }}>

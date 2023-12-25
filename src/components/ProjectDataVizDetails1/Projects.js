@@ -3,18 +3,39 @@ import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
+import { Icon } from '@iconify/react';
+import {
+  DiJavascript1,
+  DiNodejs,
+  DiPython,
+  DiGit,
+} from "react-icons/di";
+import {
+  SiPostgresql,
+} from "react-icons/si";
 
 function ProjectList() {
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
-          <strong className="purple">Project 1</strong>
+        <h1 className="project-details-heading">
+          <strong className="purple">Aircraft Transmission Monitoring</strong>
         </h1>
-        <p style={{ color: "white" }}>
-          Projects are based on categories, click show more for details
-        </p>
+        <div className="project-details-subheading">
+          September 2023
+        </div>
+        <Row style={{ justifyContent: "center", paddingBottom: "5px", maxWidth: "400px", margin: "0 auto" }}>
+          <Col xs={4} md={2} className="tech-icons-detail">
+          <Button><Icon icon="cib:tensorflow" /></Button>
+          </Col>
+          <Col xs={4} md={2} className="tech-icons-detail">
+          <Button><DiJavascript1 /></Button>
+          </Col>
+          <Col xs={4} md={2} className="tech-icons-detail">
+          <Button><Icon icon="cib:tensorflow" /></Button>
+          </Col>
+        </Row>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={10} className="project-card">
           <p style={{ color: "white" }}>
