@@ -6,13 +6,7 @@ import Button from "react-bootstrap/Button";
 import { Icon } from '@iconify/react';
 import {
   DiJavascript1,
-  DiNodejs,
-  DiPython,
-  DiGit,
 } from "react-icons/di";
-import {
-  SiPostgresql,
-} from "react-icons/si";
 
 function ProjectList() {
   return (
