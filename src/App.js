@@ -6,15 +6,17 @@ import About from "./components/About/About";
 import ProjectsDataViz from "./components/ProjectsDataViz/Projects";
 import ProjectsDataScience from "./components/ProjectsDataScience/Projects";
 import ProjectsBackEnd from "./components/ProjectsBackEnd/Projects";
-import ProjectDataVizDetails1 from "./components/ProjectDataVizDetails1/Projects";
-import ProjectDataVizDetails2 from "./components/ProjectDataVizDetails2/Projects";
-import ProjectDataVizDetails3 from "./components/ProjectDataVizDetails3/Projects";
-import ProjectDataSciDetails1 from "./components/ProjectDataSciDetails1/Projects";
-import ProjectDataSciDetails2 from "./components/ProjectDataSciDetails2/Projects";
-import ProjectDataSciDetails3 from "./components/ProjectDataSciDetails3/Projects";
-import ProjectBackEndDetails1 from "./components/ProjectBackEndDetails1/Projects";
-import ProjectBackEndDetails2 from "./components/ProjectBackEndDetails2/Projects";
-import ProjectBackEndDetails3 from "./components/ProjectBackEndDetails3/Projects";
+import ProjectDataVizDetails1 from "./components/ProjectDetails/ProjectDataVizDetails/Project1";
+import ProjectDataVizDetails2 from "./components/ProjectDetails/ProjectDataVizDetails/Project2";
+import ProjectDataVizDetails3 from "./components/ProjectDetails/ProjectDataVizDetails/Project3";
+import ProjectDataVizDetails4 from "./components/ProjectDetails/ProjectDataVizDetails/Project4";
+import ProjectDataSciDetails1 from "./components/ProjectDetails/ProjectDataSciDetails/Project1";
+import ProjectDataSciDetails2 from "./components/ProjectDetails/ProjectDataSciDetails/Project2";
+import ProjectDataSciDetails3 from "./components/ProjectDetails/ProjectDataSciDetails/Project3";
+import ProjectDataSciDetails4 from "./components/ProjectDetails/ProjectDataSciDetails/Project4";
+import ProjectBackEndDetails1 from "./components/ProjectDetails/ProjectBackEndDetails/Project1";
+import ProjectBackEndDetails2 from "./components/ProjectDetails/ProjectBackEndDetails/Project2";
+import ProjectBackEndDetails3 from "./components/ProjectDetails/ProjectBackEndDetails/Project3";
 import Footer from "./components/Footer";
 import ProjectList from "./components/ProjectList/Projects";
 import {
@@ -55,9 +57,11 @@ function App() {
           <Route path="/project_dataviz/details_1" element={<ProjectDataVizDetails1 />} />
           <Route path="/project_dataviz/details_2" element={<ProjectDataVizDetails2 />} />
           <Route path="/project_dataviz/details_3" element={<ProjectDataVizDetails3 />} />
+          <Route path="/project_dataviz/details_4" element={<ProjectDataVizDetails4 />} />
           <Route path="/project_datasci/details_1" element={<ProjectDataSciDetails1 />} />
           <Route path="/project_datasci/details_2" element={<ProjectDataSciDetails2 />} />
           <Route path="/project_datasci/details_3" element={<ProjectDataSciDetails3 />} />
+          <Route path="/project_datasci/details_4" element={<ProjectDataSciDetails4 />} />
           <Route path="/project_backend/details_1" element={<ProjectBackEndDetails1 />} />
           <Route path="/project_backend/details_2" element={<ProjectBackEndDetails2 />} />
           <Route path="/project_backend/details_3" element={<ProjectBackEndDetails3 />} />

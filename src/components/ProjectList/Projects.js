@@ -8,7 +8,7 @@ import backend_icon from "../../Assets/Projects/Back End Icon.png";
 
 function ProjectList() {
   return (
-    <Container fluid className="project-section">
+    <Container fluid className="project-list">
       <Particle />
       <Container>
         <h1 className="project-heading">
@@ -17,7 +17,7 @@ function ProjectList() {
         <p style={{ color: "white" }}>
           Projects are based on categories, click show more for details
         </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Row style={{ justifyContent: "center", paddingBottom: "38px" }}>
           <Col md={4} className="project-card">
             <Projectlist
               imgPath={dataviz_icon}

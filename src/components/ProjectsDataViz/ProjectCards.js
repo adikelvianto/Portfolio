@@ -18,8 +18,8 @@ function ProjectCards(props) {
           {props.description}
         </Card.Text>
 
-        {/*GitHub & Details Only*/}
-        {props.hasDetails && props.hasGithub && !props.hasDemo &&  (
+        {/*GitHub Only*/}
+        {props.hasGithub && !props.hasDemo &&  (
           <>
              <Button
               variant="primary"
@@ -41,8 +41,8 @@ function ProjectCards(props) {
           </>
         )}
 
-        {/*Condition where has demo has details and doesnt have github*/}
-        {props.hasDemo && props.hasDetails && !props.hasGithub && (
+        {/*Condition where has demo and doesnt have github*/}
+        {props.hasDemo && !props.hasGithub && (
           <>
             <Button
               variant="primary"
@@ -65,7 +65,7 @@ function ProjectCards(props) {
         )}
 
         {/*All condition satisfied*/}
-        {props.hasDemo && props.hasDetails && props.hasGithub && (
+        {props.hasDemo && props.hasGithub && (
           <>
              <Button
               variant="primary"

@@ -7,13 +7,15 @@ function Type() {
       options={{
         strings: [
           "Reliability Engineer at Citilink Indonesia",
-          "Tech Enthusiast",
           "Verified TensorFlow Developer",
+          "Tech Enthusiast",
           "Aerospace Engineering Graduate",
         ],
         autoStart: true,
         loop: true,
-        deleteSpeed: 25,
+        pauseFor: 500,
+        delay: 50,
+        deleteSpeed: 40,
       }}
     />
   );

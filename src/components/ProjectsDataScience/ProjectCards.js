@@ -11,15 +11,15 @@ function ProjectCards(props) {
     <Card className="project-card-view">
       <Card.Img variant="top" src={props.imgPath} alt="card-img" />
       <Card.Body>
-        <Card.Title><strong>{props.title}</strong></Card.Title>
+        <Card.Title className="purple-card"><strong>{props.title}</strong></Card.Title>
         <Card.Text>{props.date}</Card.Text>
         <br />
         <Card.Text style={{ textAlign: "justify" }}>
           {props.description}
         </Card.Text>
 
-        {/*GitHub & Details Only*/}
-        {props.hasDetails && props.hasGithub && !props.hasDemo &&  (
+        {/*GitHub Only*/}
+        {props.hasGithub && !props.hasDemo &&  (
           <>
              <Button
               variant="primary"
@@ -41,8 +41,8 @@ function ProjectCards(props) {
           </>
         )}
 
-        {/*Condition where has demo has details and doesnt have github*/}
-        {props.hasDemo && props.hasDetails && !props.hasGithub && (
+        {/*Condition where has demo and doesnt have github*/}
+        {props.hasDemo && !props.hasGithub && (
           <>
             <Button
               variant="primary"
@@ -65,7 +65,7 @@ function ProjectCards(props) {
         )}
 
         {/*All condition satisfied*/}
-        {props.hasDemo && props.hasDetails && props.hasGithub && (
+        {props.hasDemo && props.hasGithub && (
           <>
              <Button
               variant="primary"
