@@ -9,7 +9,7 @@ function ProjectList() {
     <ProjectCard
       title="Project Accomplishment Monitoring"
       date="September 2023"
-      content="loren ipsum hahahaha"
+      content="loren ipsum"
       num_of_icon={2}
       icon1="simple-icons:powerbi"
       icon2={() => <SiMicrosoftexcel />}

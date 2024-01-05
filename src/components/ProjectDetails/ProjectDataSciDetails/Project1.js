@@ -9,7 +9,7 @@ function ProjectList() {
       <ProjectCard
         title="Boeing 747 Auto Land Machine Learning Model"
         date="September 2023"
-        content="loren ipsum hahahaha"
+        content="loren ipsum"
         num_of_icon={2}
         icon1={() => <DiPython />}
         icon2="cib:tensorflow"

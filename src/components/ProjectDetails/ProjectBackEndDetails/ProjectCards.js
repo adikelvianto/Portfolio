@@ -49,13 +49,12 @@ function ProjectCards(props) {
           {props.date}
         </div>
 
-        <Row style={{ justifyContent: "center", paddingBottom: "5px", maxWidth: "400px", margin: "0 auto" }}>
+        <Row style={{ justifyContent: "center", paddingBottom: "5px", maxWidth: "500px", margin: "0 auto" }}>
           {iconCols}
         </Row>
 
-        <p style={{ color: "white" }}>
-          {props.content}
-        </p>
+        <div style={{ color: "white" }} dangerouslySetInnerHTML={{ __html: props.content }}>
+        </div>
 
         <div style={{ marginTop: "20px" }}>
       {!props.hasGithub && props.hasDemo && (

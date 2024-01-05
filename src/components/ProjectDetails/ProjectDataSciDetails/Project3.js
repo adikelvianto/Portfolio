@@ -10,7 +10,7 @@ function ProjectList() {
       <ProjectCard
         title="Neural Style Transfer using AdaIn Method"
         date="September 2023"
-        content="loren ipsum hahahaha"
+        content="loren ipsum"
         num_of_icon={3}
         icon1={() => <DiPython />}
         icon2="cib:tensorflow"

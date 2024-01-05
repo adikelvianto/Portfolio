@@ -6,13 +6,18 @@ import { FaAws } from "react-icons/fa";
 import { DiNodejs } from "react-icons/di";
 import { Container } from "react-bootstrap";
 
+
 function ProjectList() {
   return (
     <Container fluid className="project-details-section">
       <ProjectCard
         title="Forum API"
         date="August 2023"
-        content="loren ipsum hahahaha"
+        content="<h1>This is H1 </h1>
+                </br>
+                <p>this is paragraph</p>
+                <li> number 1
+                <li> number 2"
         num_of_icon={5}
         icon1={() => <DiNodejs />}
         icon2={() => <SiPostgresql />}

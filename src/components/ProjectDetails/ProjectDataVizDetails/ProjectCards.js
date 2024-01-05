@@ -53,9 +53,8 @@ function ProjectCards(props) {
           {iconCols}
         </Row>
 
-        <p style={{ color: "white" }}>
-          {props.content}
-        </p>
+        <div style={{ color: "white" }} dangerouslySetInnerHTML={{ __html: props.content }}>
+        </div>
 
         <div style={{ marginTop: "20px" }}>
       {!props.hasGithub && props.hasDemo && (

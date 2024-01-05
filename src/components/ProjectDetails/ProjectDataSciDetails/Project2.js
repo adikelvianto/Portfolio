@@ -9,7 +9,7 @@ function ProjectList() {
       <ProjectCard
         title="Waypoint Following Business Jet Aircraft with Deep Learning"
         date="September 2023"
-        content="loren ipsum hahahaha"
+        content="loren ipsum"
         num_of_icon={3}
         icon1={() => <DiPython />}
         icon2="cib:tensorflow"

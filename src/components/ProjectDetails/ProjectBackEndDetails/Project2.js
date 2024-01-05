@@ -11,7 +11,7 @@ function ProjectList() {
       <ProjectCard
         title="Open Music API"
         date="July 2023"
-        content="loren ipsum hahahaha"
+        content="loren ipsum"
         num_of_icon={4}
         icon1={() => <DiNodejs />}
         icon2={() => <SiPostgresql />}

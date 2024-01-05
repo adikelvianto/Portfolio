@@ -10,7 +10,7 @@ function ProjectList() {
       <ProjectCard
         title="BookShelf API"
         date="November 2022"
-        content="loren ipsum hahahaha"
+        content="loren ipsum"
         num_of_icon={2}
         icon1={() => <DiNodejs />}
         icon3={() => <SiPostman />}

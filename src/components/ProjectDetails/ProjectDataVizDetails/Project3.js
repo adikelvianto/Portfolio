@@ -10,7 +10,7 @@ function ProjectList() {
     <ProjectCard
       title="Brazillian E-Commerce"
       date="September 2023"
-      content="loren ipsum hahahaha"
+      content="loren ipsum"
       num_of_icon={2}
       icon1={() => <SiStreamlit />}
       icon2={() => <DiPython />}

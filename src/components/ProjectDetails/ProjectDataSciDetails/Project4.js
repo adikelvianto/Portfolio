@@ -10,7 +10,7 @@ function ProjectList() {
       <ProjectCard
         title="Avionics Component Failure Prediction"
         date="September 2023"
-        content="loren ipsum hahahaha"
+        content="loren ipsum"
         num_of_icon={5}
         icon1={() => <DiPython />}
         icon2="devicon-plain:scikitlearn"
