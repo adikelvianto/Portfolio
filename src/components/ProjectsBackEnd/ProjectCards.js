@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 function ProjectCards(props) {
   return (
     <Card className="project-card-view">
-      <Card.Img variant="top" src={props.imgPath} alt="card-img" />
       <Card.Body>
         <Card.Title className="purple-card"><strong>{props.title}</strong></Card.Title>
         <Card.Text>{props.date}</Card.Text>

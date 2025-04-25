@@ -15,14 +15,15 @@ function ProjectList() {
           My <strong className="purple">Projects </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Projects are based on categories, click show more for details
+          Projects are grouped by category. Click <strong className="purple">‘Show More’</strong> for details.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "38px" }}>
           <Col md={4} className="project-card">
             <Projectlist
               imgPath={dataviz_icon}
               title="Data Processing and Visualization"
-              description="Gathering, cleansing, and visualize data"
+              description="Collecting, cleansing, transforming, and presenting data
+               through impactful visuals to support better decision-making."
               link="/project_dataviz"
             />
           </Col>
@@ -31,15 +32,16 @@ function ProjectList() {
             <Projectlist
               imgPath={datascience_icon}
               title="Data Science"
-              description="Gathering, cleansing, and visualize data"
+              description="Leveraging statistical methods or machine learning to uncover patterns,
+               forecast trends, and extract valuable insights."
               link="/project_datascience"
             />
           </Col>
           <Col md={4} className="project-card">
             <Projectlist
               imgPath={backend_icon}
-              title="Back End"
-              description="Gathering, cleansing, and visualize data"
+              title="Backend Development"
+              description="Building robust APIs, managing databases, and ensuring seamless integration between services and front-end systems."
               link="/project_backend"
             />
           </Col>

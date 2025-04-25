@@ -463,7 +463,7 @@ button:focus {
 
 .project-section {
   position: relative !important;
-  padding-top: 150px !important;
+  padding-top: 110px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
 }
@@ -483,11 +483,24 @@ button:focus {
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
+  padding: 5px;
 }
+
+.project-card-view .card-text {
+  font-size: 0.9em;
+  font-weight: 400;
+  color: #dcdcdc;
+  line-height: 1.6; 
+}
+
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
   box-shadow: 0 4px 4px 5px rgba(72, 101, 184, 0.561) !important;
+}
+
+.project-card-view .card-text {
+  white-space: pre-line; /* Preserve line breaks in the description */
 }
 
 .card-img-top {
@@ -599,10 +612,7 @@ button:focus {
   }
 }
 
-.back-button {
-  position: relative;
-  z-index: 2;
-}
+
 
 .image-with-text {
   display: flex;
@@ -660,4 +670,23 @@ button:focus {
   padding-left: 70px !important;
   padding-right: 70px !important;
   background-image: var(--section-background-color) !important;
+}
+
+.back-button {
+  position: relative;
+  z-index: 2;
+}
+
+.topleft-back-button {
+  z-index: 10000;
+  position: relative;
+  border-radius: 30%;
+  width: 60px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
