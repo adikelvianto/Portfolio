@@ -27,12 +27,13 @@ function ProjectsDataScience() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={autoland}
-              title="Boeing 747 Auto Land Machine Learning Model"
-              date="September 2023"
+              title="Deep Learning-Based Elevator & Throttle Modeling for Boeing 747 Landings"
+              date="October 2022"
               hasDemo={false}
               hasGithub={true}
               link="/project_datasci/details_1"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
+              description="Built a deep learning model for Boeing 747 auto-landing using real Flight Data Recorder (FDR) data. Trained separate models for elevator and throttle control to mimic landing behavior.
+               Built with TensorFlow and preprocessed over 300 flight records."
               ghLink="https://github.com/adikelvianto/Auto_Landing_DL"
             />
           </Col>
@@ -40,12 +41,13 @@ function ProjectsDataScience() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={fo_waypoint}
-              title="Waypoint Following Business Jet Aircraft with Deep Learning"
-              date="September 2023"
+              title="Deep Learning-Based Fly-Over Waypoints Control System for Business Jet Aircraft"
+              date="August 2022"
               hasDemo={true}
               hasGithub={false}
               link="/project_datasci/details_2"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
+              description="Built a deep learning controller for Cirrus Vision SF50 to follow multiple waypoints using flight data from PID-based missions.
+               Trained with categorized roll-angle data to evaluate how training characteristics affect model performance. Simulated with MATLAB, Simulink, and X-Plane."
               ghLink="https://github.com/adikelvianto/Fly-Over_Waypoints_DL"
             />
           </Col>
@@ -53,12 +55,12 @@ function ProjectsDataScience() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={artjuna}
-              title="Neural Style Transfer using AdaIn Method"
-              date="September 2023"
+              title="Personalized Product Image Generation using a Neural Style Transfer Model"
+              date="June 2022"
               hasDemo={true}
               hasGithub={false}
               link="/project_datasci/details_3"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
+              description='Built a Neural Style Transfer model as part of a social e-commerce platform for local artists called "Artjuna". Enabled users to generate personalized product designs by combining their photos with artisan art styles. Trained on ~18k images using TensorFlow.'
               ghLink="https://github.com/Artjuna/artjuna-monorepo/tree/main/model/style_transfer"
               demoLink="https://adain-demo.streamlit.app/"              
             />
@@ -66,12 +68,12 @@ function ProjectsDataScience() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={artjuna}
-              title="Avionics Component Failure Prediction"
-              date="September 2023"
+              title="Web-Based Avionic Subcomponent Failure Prediction Using Machine Learning"
+              date="January 2022"
               hasDemo={true}
               hasGithub={false}
               link="/project_datasci/details_4"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
+              description="Developed a prototype website to predict failures of avionics components using real maintenance testing data. Trained models with scikit-learn and deployed via Flask and Streamlit for interactive user access."
               ghLink="https://github.com/adikelvianto/Avionic-Components-Failure-Prediction"
               demoLink="https://adikelvianto00.pythonanywhere.com/"              
             />
