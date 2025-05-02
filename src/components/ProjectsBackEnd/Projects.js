@@ -45,9 +45,7 @@ function ProjectsBackEnd() {
               hasDemo={false}
               hasGithub={true}
               link="/project_backend/details_1"
-              description={`ForumAPI leverages Node.js, Hapi, and PostgreSQL with a Test-Driven 
-              Development approach to provide thread creation, comment handling, and deletion functionality. \n
-               It features automated CI/CD pipelines via GitHub Actions for seamless AWS EC2/RDS deployments and enforces nginx rate limiting (90 req/min) alongside HTTPS for robust security.`}
+              description={`RESTful API that powers user authentication, threaded discussions, and nested commenting, built with clean architecture and robust error handling.`}
               ghLink="https://github.com/adikelvianto/ForumAPI"
             />
           </Col>
@@ -60,9 +58,7 @@ function ProjectsBackEnd() {
               hasDemo={false}
               hasGithub={true}
               link="/project_backend/details_2"
-              description={`OpenMusic API is built using Node.js, Hapi, RabbitMQ, Redis, and PostgreSQL, providing comprehensive music data management capabilities.\n
-               It supports album and song creation, retrieval, update, and deletion, alongside playlist management with user authentication.\n
-                Features include song search via query parameters, playlist collaboration, song export via RabbitMQ, album cover uploads, and liking functionality with server-side caching powered by Redis. Email notifications are handled with Nodemailer for song export results.`}
+              description={`A modular RESTful API for managing music, playlists, and user collaborations—featuring authentication, file uploads, caching with Redis, and background processing using RabbitMQ.`}
               ghLink="https://github.com/adikelvianto/OpenMusicAPI"
             />
           </Col>
@@ -74,9 +70,8 @@ function ProjectsBackEnd() {
               date="November 2022"
               hasDemo={false}
               hasGithub={true}
-              link="/project_backend/details_2"
-              description={`BookShelf API provides RESTful endpoints for creating, listing, retrieving, updating, and deleting book records. \n
-               Built on Node.js with the Hapi framework, it includes comprehensive data validation and error handling to ensure reliable and user-friendly interactions.`}
+              link="/project_backend/details_3"
+              description={`The BookShelf API is a backend service for managing book collections, offering full CRUD functionality, robust input validation, and clear error handling using Hapi and Node.js.`}
               ghLink="https://github.com/adikelvianto/BookShelfAPI"
             />
           </Col>

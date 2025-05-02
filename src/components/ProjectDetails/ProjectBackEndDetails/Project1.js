@@ -10,11 +10,11 @@ function ProjectList() {
   return (
     <Container fluid className="project-details-section">
       <ProjectCard
-        title="Forum API"
+        title="ForumAPI – Discussion Platform with Node.js, Hapi, and PostgreSQL"
         date="August 2023"
         content={`
-          <h1>Forum API – A Lightweight Discussion Platform</h1>
-          <p>The Forum API is a RESTful backend service that enables users to register, log in, and participate in threaded discussions. It was built as a submission for Dicoding’s Back-End Developer Program, emphasizing clean architecture, automated testing, and robust error handling.</p>
+          <p class="project-details-p">The Forum API is a RESTful backend service that enables users to register, log in, and participate in threaded discussions.
+           It emphasizes clean architecture, automated testing, and robust error handling to ensure reliability and maintainability.</p>
 
           </br>
           

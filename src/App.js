@@ -47,26 +47,28 @@ function App() {
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project_dataviz" element={<ProjectsDataViz  />} />
-          <Route path="/project_datascience" element={<ProjectsDataScience />} />
-          <Route path="/project_backend" element={<ProjectsBackEnd />} />
-          <Route path="/projectlist" element={<ProjectList />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/project_dataviz/details_1" element={<ProjectDataVizDetails1 />} />
-          <Route path="/project_dataviz/details_2" element={<ProjectDataVizDetails2 />} />
-          <Route path="/project_dataviz/details_3" element={<ProjectDataVizDetails3 />} />
-          <Route path="/project_dataviz/details_4" element={<ProjectDataVizDetails4 />} />
-          <Route path="/project_datasci/details_1" element={<ProjectDataSciDetails1 />} />
-          <Route path="/project_datasci/details_2" element={<ProjectDataSciDetails2 />} />
-          <Route path="/project_datasci/details_3" element={<ProjectDataSciDetails3 />} />
-          <Route path="/project_datasci/details_4" element={<ProjectDataSciDetails4 />} />
-          <Route path="/project_backend/details_1" element={<ProjectBackEndDetails1 />} />
-          <Route path="/project_backend/details_2" element={<ProjectBackEndDetails2 />} />
-          <Route path="/project_backend/details_3" element={<ProjectBackEndDetails3 />} />
-          <Route path="*" element={<Navigate to="/"/>} />
-        </Routes>
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/project_dataviz" element={<ProjectsDataViz />} />
+            <Route path="/project_datascience" element={<ProjectsDataScience />} />
+            <Route path="/project_backend" element={<ProjectsBackEnd />} />
+            <Route path="/projectlist" element={<ProjectList />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/project_dataviz/details_1" element={<ProjectDataVizDetails1 />} />
+            <Route path="/project_dataviz/details_2" element={<ProjectDataVizDetails2 />} />
+            <Route path="/project_dataviz/details_3" element={<ProjectDataVizDetails3 />} />
+            <Route path="/project_dataviz/details_4" element={<ProjectDataVizDetails4 />} />
+            <Route path="/project_datasci/details_1" element={<ProjectDataSciDetails1 />} />
+            <Route path="/project_datasci/details_2" element={<ProjectDataSciDetails2 />} />
+            <Route path="/project_datasci/details_3" element={<ProjectDataSciDetails3 />} />
+            <Route path="/project_datasci/details_4" element={<ProjectDataSciDetails4 />} />
+            <Route path="/project_backend/details_1" element={<ProjectBackEndDetails1 />} />
+            <Route path="/project_backend/details_2" element={<ProjectBackEndDetails2 />} />
+            <Route path="/project_backend/details_3" element={<ProjectBackEndDetails3 />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </Router>

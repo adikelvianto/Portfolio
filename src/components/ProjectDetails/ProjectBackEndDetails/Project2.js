@@ -9,11 +9,11 @@ function ProjectList() {
   return (
     <Container fluid className="project-details-section">
       <ProjectCard
-        title="Open Music API"
+        title="OpenMusic API – Music Service with Node.js, RabbitMQ & Redis"
         date="July 2023"
         content={`
-          <h1>OpenMusic API – Music Management Service</h1>
-          <p>This project was developed as part of Dicoding's "Belajar Fundamental Aplikasi Back-End" course. It implements a full-featured RESTful API for music album, song, and playlist management using Node.js with advanced features such as authentication, collaboration, file upload, background processing, and caching.</p>
+          <p class="project-details-p">The OpenMusic API is a robust backend service designed to manage music albums, songs, playlists, and user collaborations.
+           It features secure authentication, file uploads, server-side caching, and asynchronous processing using message queues, all built with a modular and scalable architecture.</p>
       
           <br/>
       
