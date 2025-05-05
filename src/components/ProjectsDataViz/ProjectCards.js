@@ -66,36 +66,37 @@ function ProjectCards(props) {
 
         {/*All condition satisfied*/}
         {props.hasDemo && props.hasGithub && (
-          <>
-             <Button
-              variant="primary"
-              href={props.ghLink}
-              target="_blank"
-              style={{ marginLeft: "10px" }}
-            >
-              <BsGithub /> &nbsp;
-              {"Github"}
-            </Button>
-            <Button
-              variant="primary"
-              href={props.demoLink}
-              target="_blank"
-              style={{ marginLeft: "10px" }}
-            >
-              <BiPlayCircle /> &nbsp;
-              {"Demo"}
-            </Button>
-            <Link to = {props.link}>
+        <>
+          <div style={{ display: "flex", justifyContent: "center", width: "100%", marginTop: "10px" }}>
+            <div style={{ display: "flex", gap: "10px" }}>
               <Button
-                style={{ marginLeft: "10px" }}
+                variant="primary"
+                href={props.ghLink}
+                target="_blank"
               >
+                <BsGithub /> &nbsp;
+                {"Github"}
+              </Button>
+              <Button
+                variant="primary"
+                href={props.demoLink}
+                target="_blank"
+              >
+                <BiPlayCircle /> &nbsp;
+                {"Demo"}
+              </Button>
+            </div>
+          </div>
+          <div style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}>
+            <Link to={props.link}>
+              <Button>
                 <BsInfoCircle /> &nbsp;
                 {"Details"}
               </Button>
             </Link>
-          </>
-        )}
-
+          </div>
+        </>
+)}
       </Card.Body>
     </Card>
   );

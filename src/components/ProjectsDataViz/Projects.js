@@ -5,8 +5,6 @@ import Button from "react-bootstrap/Button";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import ecommerce from "../../Assets/Projects/ecommerce.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
 import divvy from "../../Assets/Projects/divvy.png";
 import dataviz_icon from "../../Assets/Projects/Data Viz Icon.png";
 
@@ -25,42 +23,18 @@ function ProjectsDataViz() {
           Here are a few projects I've worked on recently.
         </h5>
         <Row style={{ justifyContent: "center", paddingBottom: "10px", paddingTop: "20px"}}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={chatify}
-              hasDemo={true}
-              hasGithub={false}
-              title="Aircraft Transmission Monitoring"
-              date="November 2023"
-              description="Dashboard to monitor aircraft transmission status"
-              demoLink="https://bit.ly/AircraftTransmissonDummy"
-              link="/project_dataviz/details_1"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={bitsOfCode}
-              hasDemo={true}
-              hasGithub={false}
-              title="Repetitive Project Accomplishment Monitoring"
-              date="September 2023"
-              description="Dashboard to monitor several repetitive projects"
-              demoLink="https://bit.ly/RepetitivePICADummy"
-              link="/project_dataviz/details_2"
-            />
-          </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={ecommerce}
               hasDemo={true}
               hasGithub={true}
-              title="Brazillian E-Commerce"
+              title="Interactive Analysis of Brazilian E-Commerce with Streamlit Dashboard"
               date="November 2023"
-              description="Analysis of brazillian e commerce dataset for year 2018-2022 and dashboard building using Streamlit"
+              description="Conducted a full-cycle data analysis on the Brazilian Olist E-commerce dataset using Python, culminating in an interactive Streamlit dashboard.
+               The project involved defining 9 key business questions, performing data wrangling, merging datasets, and creating insightful visualizations to extract trends and improve understanding of marketplace dynamics."
               demoLink="https://brazillian-e-commerce.streamlit.app/"
-              link="/project_dataviz/details_3"  
+              link="/project_dataviz/details_2"  
               ghLink="https://github.com/adikelvianto/Brazilian_E-commerce_Dashboard"          
             />
           </Col>
@@ -70,11 +44,12 @@ function ProjectsDataViz() {
               imgPath={divvy}
               hasDemo={true}
               hasGithub={false}
-              title="Analysis of Divvy Company Dataset in 2021 using R"
+              title="Cyclistic Membership Strategy Using R and Divvy 2021 Data"
               date="October 2022"
-              description="Analysis of divvy bike company using R language"
+              description="A comprehensive case study utilizing the 2021 Divvy bike-share dataset was conducted using R to support Cyclistic’s marketing strategy.
+               The goal was to analyze usage patterns between casual and annual riders to identify actionable insights that could help convert casual users into members."
               demoLink="https://www.kaggle.com/code/adikelvianto29/analysis-of-divvy-2021-dataset-using-r"
-              link="/project_dataviz/details_4"            
+              link="/project_dataviz/details_1"            
             />
           </Col>
         </Row>
