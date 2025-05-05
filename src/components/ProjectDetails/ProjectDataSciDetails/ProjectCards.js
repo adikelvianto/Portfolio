@@ -49,7 +49,7 @@ function ProjectCards(props) {
           {props.date}
         </div>
 
-        <Row style={{ justifyContent: "center", paddingBottom: "5px", maxWidth: "400px", margin: "0 auto" }}>
+        <Row style={{ justifyContent: "center", paddingBottom: "5px", maxWidth: "800px", margin: "0 auto" }}>
           {iconCols}
         </Row>
 

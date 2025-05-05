@@ -49,6 +49,7 @@ function ProjectsDataScience() {
               description="Built a deep learning controller for Cirrus Vision SF50 to follow multiple waypoints using flight data from PID-based missions.
                Trained with categorized roll-angle data to evaluate how training characteristics affect model performance. Simulated with MATLAB, Simulink, and X-Plane."
               ghLink="https://github.com/adikelvianto/Fly-Over_Waypoints_DL"
+              demoLink="https://user-images.githubusercontent.com/92104520/196455059-49da6a68-7dc4-442a-bf2d-cf279a6bc297.mp4"
             />
           </Col>
 

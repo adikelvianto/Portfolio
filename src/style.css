@@ -722,15 +722,14 @@ html, body {
 }
 
 .two-column-table {
-  width: 100%;             /* full container width */
-  max-width: 1200px;       /* allow it to stretch wider (or remove this line entirely) */
+  width: 100%;
+  max-width: 1400px;
   margin: 1.5rem auto;
   border-collapse: collapse;
 }
 
 .column {
-  /* you can tweak these to unbalance column widths if desired */
-  width: 50%;              /* or try width: 55% on left and width: 45% on right */
+  width: 50%;
   padding: 1rem 0;
   vertical-align: top;
 }
@@ -744,6 +743,13 @@ html, body {
   border-bottom: none;
 }
 
+.two-column-table td:first-child {
+  padding-right: 2rem;
+}
+
+.two-column-table td:last-child {
+  padding-left: 2rem;
+}
 
 .column h2 {
   margin-bottom: 0.75rem;
@@ -763,4 +769,18 @@ html, body {
 .project-details-p {
   padding-left: 70px;
   margin-right: 70px;
+}
+
+.project-details-section a {
+  position: relative;
+  z-index: 10;
+  color: #3e3e96; 
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.project-details-section a:hover {
+  color: #462cd6;
+  text-decoration: underline;
 }
