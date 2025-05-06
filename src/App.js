@@ -10,6 +10,22 @@ import ProjectDataVizDetails1 from "./components/ProjectDetails/ProjectDataVizDe
 import ProjectDataVizDetails2 from "./components/ProjectDetails/ProjectDataVizDetails/Project2";
 import ProjectDataVizDetails3 from "./components/ProjectDetails/ProjectDataVizDetails/Project3";
 import ProjectDataVizDetails4 from "./components/ProjectDetails/ProjectDataVizDetails/Project4";
+import ProjectDataVizDetails5 from "./components/ProjectDetails/ProjectDataVizDetails/Project5";
+import ProjectDataVizDetails6 from "./components/ProjectDetails/ProjectDataVizDetails/Project6";
+import ProjectDataVizDetails7 from "./components/ProjectDetails/ProjectDataVizDetails/Project7";
+import ProjectDataVizDetails8 from "./components/ProjectDetails/ProjectDataVizDetails/Project8";
+import ProjectDataVizDetails9 from "./components/ProjectDetails/ProjectDataVizDetails/Project9";
+import ProjectDataVizDetails10 from "./components/ProjectDetails/ProjectDataVizDetails/Project10";
+import ProjectDataVizDetails11 from "./components/ProjectDetails/ProjectDataVizDetails/Project11";
+import ProjectDataVizDetails12 from "./components/ProjectDetails/ProjectDataVizDetails/Project12";
+import ProjectDataVizDetails13 from "./components/ProjectDetails/ProjectDataVizDetails/Project13";
+import ProjectDataVizDetails14 from "./components/ProjectDetails/ProjectDataVizDetails/Project14";
+import ProjectDataVizDetails15 from "./components/ProjectDetails/ProjectDataVizDetails/Project15";
+import ProjectDataVizDetails16 from "./components/ProjectDetails/ProjectDataVizDetails/Project16";
+import ProjectDataVizDetails17 from "./components/ProjectDetails/ProjectDataVizDetails/Project17";
+import ProjectDataVizDetails18 from "./components/ProjectDetails/ProjectDataVizDetails/Project18";
+import ProjectDataVizDetails19 from "./components/ProjectDetails/ProjectDataVizDetails/Project19";
+import ProjectDataVizDetails20 from "./components/ProjectDetails/ProjectDataVizDetails/Project20";
 import ProjectDataSciDetails1 from "./components/ProjectDetails/ProjectDataSciDetails/Project1";
 import ProjectDataSciDetails2 from "./components/ProjectDetails/ProjectDataSciDetails/Project2";
 import ProjectDataSciDetails3 from "./components/ProjectDetails/ProjectDataSciDetails/Project3";
@@ -59,6 +75,22 @@ function App() {
             <Route path="/project_dataviz/details_2" element={<ProjectDataVizDetails2 />} />
             <Route path="/project_dataviz/details_3" element={<ProjectDataVizDetails3 />} />
             <Route path="/project_dataviz/details_4" element={<ProjectDataVizDetails4 />} />
+            <Route path="/project_dataviz/details_5" element={<ProjectDataVizDetails5 />} />
+            <Route path="/project_dataviz/details_6" element={<ProjectDataVizDetails6 />} />
+            <Route path="/project_dataviz/details_7" element={<ProjectDataVizDetails7 />} />
+            <Route path="/project_dataviz/details_8" element={<ProjectDataVizDetails8 />} />
+            <Route path="/project_dataviz/details_9" element={<ProjectDataVizDetails9 />} />
+            <Route path="/project_dataviz/details_10" element={<ProjectDataVizDetails10 />} />
+            <Route path="/project_dataviz/details_11" element={<ProjectDataVizDetails11 />} />
+            <Route path="/project_dataviz/details_12" element={<ProjectDataVizDetails12 />} />
+            <Route path="/project_dataviz/details_13" element={<ProjectDataVizDetails13 />} />
+            <Route path="/project_dataviz/details_14" element={<ProjectDataVizDetails14 />} />
+            <Route path="/project_dataviz/details_15" element={<ProjectDataVizDetails15 />} />
+            <Route path="/project_dataviz/details_16" element={<ProjectDataVizDetails16 />} />
+            <Route path="/project_dataviz/details_17" element={<ProjectDataVizDetails17 />} />
+            <Route path="/project_dataviz/details_18" element={<ProjectDataVizDetails18 />} />
+            <Route path="/project_dataviz/details_19" element={<ProjectDataVizDetails19 />} />
+            <Route path="/project_dataviz/details_20" element={<ProjectDataVizDetails20 />} />
             <Route path="/project_datasci/details_1" element={<ProjectDataSciDetails1 />} />
             <Route path="/project_datasci/details_2" element={<ProjectDataSciDetails2 />} />
             <Route path="/project_datasci/details_3" element={<ProjectDataSciDetails3 />} />

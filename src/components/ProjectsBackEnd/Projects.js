@@ -4,10 +4,7 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import chatify from "../../Assets/Projects/chatify.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
 import backend_icon from "../../Assets/Projects/Back End Icon.png";
-import { TbArrowBackUp } from "react-icons/tb";
 
 function ProjectsBackEnd() {
   return (
@@ -21,11 +18,6 @@ function ProjectsBackEnd() {
             justifyContent: "space-between",
           }}
         >
-          <Link to="/projectlist">
-            <Button className="topleft-back-button">
-              <TbArrowBackUp size={24}/>
-            </Button>
-          </Link>
     <h1 className="image-with-text" style={{ margin: "0 auto", textAlign: "center" }}>
       <strong className="purple">Back End</strong>
       <img src={backend_icon} alt="" className="aligned-image" />
@@ -39,7 +31,6 @@ function ProjectsBackEnd() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
               title="ForumAPI – Discussion Platform with Node.js, Hapi, and PostgreSQL"
               date="August 2023"
               hasDemo={false}
@@ -47,12 +38,12 @@ function ProjectsBackEnd() {
               link="/project_backend/details_1"
               description={`RESTful API that powers user authentication, threaded discussions, and nested commenting, built with clean architecture and robust error handling.`}
               ghLink="https://github.com/adikelvianto/ForumAPI"
+              projectType="personal"           
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
               title="OpenMusic API – Music Service with Node.js, RabbitMQ & Redis"
               date="July 2023"
               hasDemo={false}
@@ -60,12 +51,12 @@ function ProjectsBackEnd() {
               link="/project_backend/details_2"
               description={`A modular RESTful API for managing music, playlists, and user collaborations—featuring authentication, file uploads, caching with Redis, and background processing using RabbitMQ.`}
               ghLink="https://github.com/adikelvianto/OpenMusicAPI"
+              projectType="personal"           
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
               title="BookShelf API – CRUD Book Management with Node.js & Hapi API"
               date="November 2022"
               hasDemo={false}
@@ -73,6 +64,7 @@ function ProjectsBackEnd() {
               link="/project_backend/details_3"
               description={`The BookShelf API is a backend service for managing book collections, offering full CRUD functionality, robust input validation, and clear error handling using Hapi and Node.js.`}
               ghLink="https://github.com/adikelvianto/BookShelfAPI"
+              projectType="personal"           
             />
           </Col>
         </Row>

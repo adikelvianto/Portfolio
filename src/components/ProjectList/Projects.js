@@ -25,6 +25,7 @@ function ProjectList() {
               description="Collecting, cleansing, transforming, and presenting data
                through impactful visuals to support better decision-making."
               link="/project_dataviz"
+              count={20}
             />
           </Col>
 
@@ -35,6 +36,7 @@ function ProjectList() {
               description="Leveraging statistical methods or machine learning to uncover patterns,
                forecast trends, and extract valuable insights."
               link="/project_datascience"
+              count={4}
             />
           </Col>
           <Col md={4} className="project-card">
@@ -43,6 +45,7 @@ function ProjectList() {
               title="Backend Development"
               description="Building robust APIs, managing databases, and ensuring seamless integration between services and front-end systems."
               link="/project_backend"
+              count={3}
             />
           </Col>
         </Row>
