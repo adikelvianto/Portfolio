@@ -7,7 +7,6 @@ import { FaPlane } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function ProjectCards(props) {
-  // Determine icon based on project type
   const icon =
     props.projectType === "airline" ? (
       <FaPlane />
@@ -16,8 +15,7 @@ function ProjectCards(props) {
     ) : null;
 
   return (
-    <Card className="project-card-view" style={{ position: "relative" }}>
-      {/* Circular icon badge */}
+    <Card className="project-card-view" style={{ position: "relative", marginBottom: "20px" }}>
       {icon && (
         <div
           style={{
@@ -27,13 +25,14 @@ function ProjectCards(props) {
             backgroundColor: "#6c63ff",
             color: "white",
             borderRadius: "50%",
-            width: "32px",
-            height: "32px",
+            width: "40px",
+            height: "40px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            fontSize: "1rem",
+            fontSize: "1.2rem",
             zIndex: 1,
+            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.2)",
           }}
         >
           {icon}
@@ -47,89 +46,43 @@ function ProjectCards(props) {
           alt="card-img"
           onContextMenu={(e) => e.preventDefault()}
           draggable={false}
-          style={{ pointerEvents: "none", userSelect: "none" }}
+          style={{
+            pointerEvents: "none",
+            userSelect: "none",
+            maxHeight: "200px",
+            objectFit: "cover",
+          }}
         />
       )}
 
       <Card.Body>
         <Card.Title className="purple-card">
-          <strong>{props.title}</strong>
+          <strong>{props.title || "Untitled Project"}</strong>
         </Card.Title>
-        <Card.Text>{props.date}</Card.Text>
+        <Card.Text>{props.date || "No Date Provided"}</Card.Text>
         <br />
         <Card.Text style={{ textAlign: "justify" }}>
-          {props.description}
+          {props.description || "No description available for this project."}
         </Card.Text>
 
-        {/* All three buttons (GitHub + Demo + Details) */}
         {props.hasDemo && props.hasGithub && (
           <>
             <div
               style={{
                 display: "flex",
                 justifyContent: "center",
-                width: "100%",
+                gap: "15px",
                 marginTop: "10px",
               }}
             >
-              <div style={{ display: "flex", gap: "10px" }}>
-                <Button variant="primary" href={props.ghLink} target="_blank">
-                  <BsGithub /> &nbsp; Github
-                </Button>
-                <Button variant="primary" href={props.demoLink} target="_blank">
-                  <BiPlayCircle /> &nbsp; Demo
-                </Button>
-              </div>
-            </div>
-            <div
-              style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}
-            >
-              <Link to={props.link}>
-                <Button>
-                  <BsInfoCircle /> &nbsp; Details
-                </Button>
-              </Link>
-            </div>
-          </>
-        )}
-
-        {/* Only GitHub */}
-        {props.hasGithub && !props.hasDemo && (
-          <>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                gap: "10px",
-                marginTop: "10px",
-              }}
-            >
-              <Button variant="primary" href={props.ghLink} target="_blank">
+              <Button variant="primary" href={props.ghLink} target="_blank" aria-label="View GitHub Repository">
                 <BsGithub /> &nbsp; Github
               </Button>
-              <Link to={props.link}>
-                <Button>
-                  <BsInfoCircle /> &nbsp; Details
-                </Button>
-              </Link>
-            </div>
-          </>
-        )}
-
-        {/* Only Demo */}
-        {props.hasDemo && !props.hasGithub && (
-          <>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                gap: "10px",
-                marginTop: "10px",
-              }}
-            >
-              <Button variant="primary" href={props.demoLink} target="_blank">
+              <Button variant="primary" href={props.demoLink} target="_blank" aria-label="View Demo">
                 <BiPlayCircle /> &nbsp; Demo
               </Button>
+            </div>
+            <div style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}>
               <Link to={props.link}>
                 <Button>
                   <BsInfoCircle /> &nbsp; Details
@@ -139,11 +92,8 @@ function ProjectCards(props) {
           </>
         )}
 
-        {/* Neither GitHub nor Demo — just show Details */}
         {!props.hasDemo && !props.hasGithub && (
-          <div
-            style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}
-          >
+          <div style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}>
             <Link to={props.link}>
               <Button>
                 <BsInfoCircle /> &nbsp; Details
