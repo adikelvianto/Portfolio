@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import ecommerce from "../../Assets/Projects/ecommerce.png";
-import divvy from "../../Assets/Projects/divvy.png";
 import dataviz_icon from "../../Assets/Projects/Data Viz Icon.png";
+import divvy from "../../Assets/Projects/divvy.png";
+import ecommerce from "../../Assets/Projects/ecommerce.png";
 import acfaulttracker from  "../../Assets/Projects/AC_FaultTracker.png";
 import comp_life_cycle from "../../Assets/Projects/ComponentLifecycle.png";
 
 function ProjectsDataViz() {
+
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const projects = [
     {
@@ -238,21 +241,26 @@ function ProjectsDataViz() {
     },
   ];
   
-  // Pagination state
-  const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 6;
+  // Read page query from URL
+  const queryParams = new URLSearchParams(location.search);
+  const initialPage = parseInt(queryParams.get("page")) || 1;
 
-  // Calculate the projects to display on the current page
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(initialPage);
+  const projectsPerPage = 4;
+
+  useEffect(() => {
+    const newPage = parseInt(new URLSearchParams(location.search).get("page")) || 1;
+    setCurrentPage(newPage);
+  }, [location.search]);
+
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
   const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
-
-  // Calculate total pages
   const totalPages = Math.ceil(projects.length / projectsPerPage);
 
-  // Handle page change
   const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
+    navigate(`?page=${pageNumber}`);
   };
 
   return (
@@ -267,9 +275,27 @@ function ProjectsDataViz() {
         <h5 style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </h5>
+
+        {/* Pagination Controls */}
+        <div style={{ textAlign: "center", marginTop: "20px", position: "relative", zIndex: 2 }}>
+          {Array.from({ length: totalPages }, (_, index) => {
+            const pageNumber = index + 1;
+            return (
+              <Button
+                key={index}
+                variant={pageNumber === currentPage ? "primary" : "outline-primary"}
+                onClick={() => handlePageChange(pageNumber)}
+                style={{ margin: "0 5px" }}
+              >
+                {pageNumber}
+              </Button>
+            );
+          })}
+        </div>
+
         <Row style={{ justifyContent: "center", paddingBottom: "10px", paddingTop: "20px" }}>
           {currentProjects.map((project, index) => (
-            <Col md={4} className="project-card" key={index}>
+            <Col md={3} className="project-card" key={index}>
               <ProjectCard
                 imgPath={project.imgPath}
                 hasDemo={project.hasDemo}
@@ -278,26 +304,16 @@ function ProjectsDataViz() {
                 date={project.date}
                 description={project.description}
                 link={`${project.link}?page=${currentPage}`}
-                demoLink={project.demoLink}
-                ghLink={project.ghLink}
+                demoLink={project.demoLink || ""}
+                ghLink={project.ghLink || ""}
                 projectType={project.projectType}
               />
             </Col>
           ))}
         </Row>
-        {/* Pagination Controls */}
-        <div style={{ textAlign: "center", marginTop: "20px", position: "relative", zIndex: 2 }}>
-          {Array.from({ length: totalPages }, (_, index) => (
-            <Button
-              key={index}
-              variant={index + 1 === currentPage ? "primary" : "outline-primary"}
-              onClick={() => handlePageChange(index + 1)}
-              style={{ margin: "0 5px" }}
-            >
-              {index + 1}
-            </Button>
-          ))}
-        </div>
+
+        
+
         <div style={{ textAlign: "center", marginTop: "30px" }}>
           <Link to="/projectlist" className="back-button">
             <Button variant="primary">Back to My Projects</Button>

@@ -16,9 +16,8 @@ function ProjectList() {
       num_of_icon={2}
       icon1={() => <FaPhp />}
       icon2={() => <DiMsqlServer />}
-      hasDemo={true}
-      hasGithub={false}
-      demoLink="https://www.kaggle.com/code/adikelvianto29/analysis-of-divvy-2021-dataset-using-r"
+      hasDemo={false}
+      hasGithub={false} 
    />
    </Container>
   );

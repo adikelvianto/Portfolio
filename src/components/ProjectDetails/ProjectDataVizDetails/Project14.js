@@ -13,9 +13,8 @@ function ProjectList() {
       written in 45 BC  This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ip de Finibus Bonorum et"
       num_of_icon={3}
       icon1="cib:r"
-      hasDemo={true}
-      hasGithub={false}
-      demoLink="https://www.kaggle.com/code/adikelvianto29/analysis-of-divvy-2021-dataset-using-r"
+      hasDemo={false}
+      hasGithub={false} 
    />
    </Container>
   );
