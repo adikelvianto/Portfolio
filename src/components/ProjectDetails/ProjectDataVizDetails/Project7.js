@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
+import { SiPalantir } from "react-icons/si";
 
 function ProjectList() {
   return (
@@ -8,13 +9,90 @@ function ProjectList() {
     <ProjectCard
       title="Technical Repair Request Status Tracker"
       date="February 2024"
-      content="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
-      looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum
-      written in 45 BC  This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ip de Finibus Bonorum et"
-      num_of_icon={3}
-      icon1="cib:r"
+      content={`
+        <p class="project-details-p">
+          Monitors repair-related technical requests submitted to manufacturers (e.g., Airbus), 
+          with clear status tracking and topic categorization. Minimizes the risk of missed or unanswered events.
+        </p>
+      
+        <br/>
+      
+        <table class="two-column-table">
+          <!-- Row 1 -->
+          <tr>
+            <td class="column">
+              <h2>🔍 Overview</h2>
+              <ul>
+                <li>Used by the airframe engineering team to monitor the repair progress of submitted technical requests</li>
+                <li>Enabled categorization by damage type and aircraft, preventing follow-up delays</li>
+              </ul>
+            </td>
+            <td class="column">
+              <h2>🛠️ Tools & Technologies</h2>
+              <ul>
+                <li>Palantir Contour for dashboard development</li>
+              </ul>
+            </td>
+          </tr>
+      
+          <!-- Row 2 -->
+          <tr>
+            <td class="column">
+              <h2>🧱 Dataset & Preprocessing</h2>
+              <ul>
+                <li>Technical request dataset from manufacturer (e.g., Airbus)</li>
+                <li>Filtered and grouped by repair status, topic, and aircraft registration</li>
+              </ul>
+            </td>
+            <td class="column">
+              <h2>👨‍💻 My Responsibilities</h2>
+              <ul>
+                <li>Designed and structured the dashboard layout for clarity</li>
+                <li>Collaborated with the airframe engineering team to define relevant tracking fields</li>
+              </ul>
+            </td>
+          </tr>
+      
+          <!-- Row 3 -->
+          <tr>
+            <td class="column">
+              <h2>📌 Key Features</h2>
+              <ul>
+                <li>Filter by open, in-progress, and closed status</li>
+                <li>Breakdown by damage type and component area</li>
+                <li>Search and group by aircraft registration and ATA chapter</li>
+              </ul>
+            </td>
+            <td class="column">
+              <h2>⚙️ Challenges & Solutions</h2>
+              <ul>
+                <li>No major technical challenge</li>
+              </ul>
+            </td>
+          </tr>
+      
+          <!-- Row 4 -->
+          <tr>
+            <td class="column">
+              <h2>📈 Results</h2>
+              <ul>
+                <li>Reduced risk of untracked or delayed follow-ups</li>
+                <li>Improved cross-team situational awareness on ongoing repairs</li>
+              </ul>
+            </td>
+            <td class="column">
+              <h2>📚 Lessons Learned</h2>
+              <ul>
+                <li>Centralizing repair request updates ensures no communication or follow-up is skipped</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      `}      
+      num_of_icon={1}
+      icon1={() => <SiPalantir />}
       hasDemo={false}
-      hasGithub={false} 
+      hasGithub={false}   
    />
    </Container>
   );

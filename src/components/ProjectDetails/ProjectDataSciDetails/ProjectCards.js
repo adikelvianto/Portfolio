@@ -53,7 +53,7 @@ function ProjectCards(props) {
           {iconCols}
         </Row>
 
-        <div style={{ color: "white" }} dangerouslySetInnerHTML={{ __html: props.content }}>
+        <div style={{ color: "white", position: "relative", zIndex: 2}} dangerouslySetInnerHTML={{ __html: props.content }}>
         </div>
 
         <div style={{ marginTop: "20px" }}>

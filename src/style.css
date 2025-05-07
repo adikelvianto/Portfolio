@@ -684,20 +684,6 @@ button:focus {
   z-index: 2;
 }
 
-.topleft-back-button {
-  z-index: 10000;
-  position: relative;
-  border-radius: 30%;
-  width: 60px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
 .project-details-section ul {
   list-style-position: inside;
   list-style-type: disc;
@@ -711,8 +697,8 @@ button:focus {
 
 .two-column-table {
   width: 100%;
-  max-width: 1200px;
-  margin: 1.5rem auto;
+  max-width: 90%;
+  margin: 2rem auto;
   border-collapse: collapse;
 }
 
