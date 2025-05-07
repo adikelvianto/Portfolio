@@ -65,24 +65,29 @@ function ProjectCards(props) {
           {props.description || "No description available for this project."}
         </Card.Text>
 
+        {/* All three buttons (GitHub + Demo + Details) */}
         {props.hasDemo && props.hasGithub && (
           <>
             <div
               style={{
                 display: "flex",
                 justifyContent: "center",
-                gap: "15px",
+                width: "100%",
                 marginTop: "10px",
               }}
             >
-              <Button variant="primary" href={props.ghLink} target="_blank" aria-label="View GitHub Repository">
-                <BsGithub /> &nbsp; Github
-              </Button>
-              <Button variant="primary" href={props.demoLink} target="_blank" aria-label="View Demo">
-                <BiPlayCircle /> &nbsp; Demo
-              </Button>
+              <div style={{ display: "flex", gap: "10px" }}>
+                <Button variant="primary" href={props.ghLink} target="_blank">
+                  <BsGithub /> &nbsp; Github
+                </Button>
+                <Button variant="primary" href={props.demoLink} target="_blank">
+                  <BiPlayCircle /> &nbsp; Demo
+                </Button>
+              </div>
             </div>
-            <div style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}>
+            <div
+              style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}
+            >
               <Link to={props.link}>
                 <Button>
                   <BsInfoCircle /> &nbsp; Details
@@ -92,8 +97,57 @@ function ProjectCards(props) {
           </>
         )}
 
+        {/* Only GitHub */}
+        {props.hasGithub && !props.hasDemo && (
+          <>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                gap: "10px",
+                marginTop: "10px",
+              }}
+            >
+              <Button variant="primary" href={props.ghLink} target="_blank">
+                <BsGithub /> &nbsp; Github
+              </Button>
+              <Link to={props.link}>
+                <Button>
+                  <BsInfoCircle /> &nbsp; Details
+                </Button>
+              </Link>
+            </div>
+          </>
+        )}
+
+        {/* Only Demo */}
+        {props.hasDemo && !props.hasGithub && (
+          <>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                gap: "10px",
+                marginTop: "10px",
+              }}
+            >
+              <Button variant="primary" href={props.demoLink} target="_blank">
+                <BiPlayCircle /> &nbsp; Demo
+              </Button>
+              <Link to={props.link}>
+                <Button>
+                  <BsInfoCircle /> &nbsp; Details
+                </Button>
+              </Link>
+            </div>
+          </>
+        )}
+
+        {/* Neither GitHub nor Demo — just show Details */}
         {!props.hasDemo && !props.hasGithub && (
-          <div style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}>
+          <div
+            style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}
+          >
             <Link to={props.link}>
               <Button>
                 <BsInfoCircle /> &nbsp; Details

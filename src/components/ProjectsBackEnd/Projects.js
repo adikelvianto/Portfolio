@@ -1,79 +1,133 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import backend_icon from "../../Assets/Projects/Back End Icon.png";
 
 function ProjectsBackEnd() {
-  return (
-    <Container fluid className="project-section">
-      <Particle />
-      <Container>
-      <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-    <h1 className="image-with-text" style={{ margin: "0 auto", textAlign: "center" }}>
-      <strong className="purple">Back End</strong>
-      <img src={backend_icon} alt="" className="aligned-image" />
-    </h1>
-  </div>
-  <br />
-  <h5 style={{ color: "white", fontSize: "1em" }}>
-    Here are a few projects I've worked on recently.
-  </h5>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px", paddingTop: "20px" }}>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              title="ForumAPI – Discussion Platform with Node.js, Hapi, and PostgreSQL"
-              date="August 2023"
-              hasDemo={false}
-              hasGithub={true}
-              link="/project_backend/details_1"
-              description={`RESTful API that powers user authentication, threaded discussions, and nested commenting, built with clean architecture and robust error handling.`}
-              ghLink="https://github.com/adikelvianto/ForumAPI"
-              projectType="personal"           
-            />
-          </Col>
+  const location = useLocation();
+  const navigate = useNavigate();
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              title="OpenMusic API – Music Service with Node.js, RabbitMQ & Redis"
-              date="July 2023"
-              hasDemo={false}
-              hasGithub={true}
-              link="/project_backend/details_2"
-              description={`A modular RESTful API for managing music, playlists, and user collaborations—featuring authentication, file uploads, caching with Redis, and background processing using RabbitMQ.`}
-              ghLink="https://github.com/adikelvianto/OpenMusicAPI"
-              projectType="personal"           
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              title="BookShelf API – CRUD Book Management with Node.js & Hapi API"
-              date="November 2022"
-              hasDemo={false}
-              hasGithub={true}
-              link="/project_backend/details_3"
-              description={`The BookShelf API is a backend service for managing book collections, offering full CRUD functionality, robust input validation, and clear error handling using Hapi and Node.js.`}
-              ghLink="https://github.com/adikelvianto/BookShelfAPI"
-              projectType="personal"           
-            />
-          </Col>
-        </Row>
-        <Link to="/projectlist" className="back-button">
-          <Button variant="primary">Back to My Projects</Button>
-        </Link>
+  const projects = [
+    {
+      title: "ForumAPI – Discussion Platform with Node.js, Hapi, and PostgreSQL",
+      date: "August 2023",
+      hasDemo: false,
+      hasGithub: true,
+      link: "/project_backend/details_1",
+      description:
+        "RESTful API that powers user authentication, threaded discussions, and nested commenting, built with clean architecture and robust error handling.",
+      ghLink: "https://github.com/adikelvianto/ForumAPI",
+      projectType: "personal",
+    },
+    {
+      title: "OpenMusic API – Music Service with Node.js, RabbitMQ & Redis",
+      date: "July 2023",
+      hasDemo: false,
+      hasGithub: true,
+      link: "/project_backend/details_2",
+      description:
+        "A modular RESTful API for managing music, playlists, and user collaborations—featuring authentication, file uploads, caching with Redis, and background processing using RabbitMQ.",
+      ghLink: "https://github.com/adikelvianto/OpenMusicAPI",
+      projectType: "personal",
+    },
+    {
+      title: "BookShelf API – CRUD Book Management with Node.js & Hapi API",
+      date: "November 2022",
+      hasDemo: false,
+      hasGithub: true,
+      link: "/project_backend/details_3",
+      description:
+        "The BookShelf API is a backend service for managing book collections, offering full CRUD functionality, robust input validation, and clear error handling using Hapi and Node.js.",
+      ghLink: "https://github.com/adikelvianto/BookShelfAPI",
+      projectType: "personal",
+    },
+  ];
+  
+  // Read page query from URL
+    const queryParams = new URLSearchParams(location.search);
+    const initialPage = parseInt(queryParams.get("page")) || 1;
+  
+    // Pagination state
+    const [currentPage, setCurrentPage] = useState(initialPage);
+    const projectsPerPage = 4;
+  
+    useEffect(() => {
+      const newPage = parseInt(new URLSearchParams(location.search).get("page")) || 1;
+      setCurrentPage(newPage);
+    }, [location.search]);
+  
+    const indexOfLastProject = currentPage * projectsPerPage;
+    const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+    const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
+    const totalPages = Math.ceil(projects.length / projectsPerPage);
+  
+    const handlePageChange = (pageNumber) => {
+      navigate(`?page=${pageNumber}`);
+    };
+  
+    return (
+      <Container fluid className="project-section">
+        <Particle />
+        <Container fluid className="project-sub-section">
+          <h1 className="image-with-text" style={{ margin: "0 auto", textAlign: "center" }}>
+            <strong className="purple">Back End</strong>
+            <img src={backend_icon} alt="" className="aligned-image" />
+          </h1>
+          <br />
+          <h5 style={{ color: "white" }}>
+            Here are a few projects I've worked on recently.
+          </h5>
+  
+          {/* Pagination Controls */}
+          <div style={{ textAlign: "center", marginTop: "20px", position: "relative", zIndex: 2 }}>
+            {Array.from({ length: totalPages }, (_, index) => {
+              const pageNumber = index + 1;
+              return (
+                <Button
+                  key={index}
+                  variant={pageNumber === currentPage ? "primary" : "outline-primary"}
+                  onClick={() => handlePageChange(pageNumber)}
+                  style={{ margin: "0 5px" }}
+                >
+                  {pageNumber}
+                </Button>
+              );
+            })}
+          </div>
+      
+          <Row style={{ justifyContent: "center", paddingBottom: "10px", paddingTop: "20px" }}>
+            {/* Map through the current projects based on pagination */}
+            {currentProjects.map((project, index) => (
+              <Col md={3} className="project-card" key={index}>
+                <ProjectCard
+                  imgPath={project.imgPath}
+                  hasDemo={project.hasDemo}
+                  hasGithub={project.hasGithub}
+                  title={project.title}
+                  date={project.date}
+                  description={project.description}
+                  link={`${project.link}?page=${currentPage}`}
+                  demoLink={project.demoLink || ""}
+                  ghLink={project.ghLink || ""}
+                  projectType={project.projectType}
+                />
+              </Col>
+            ))}
+          </Row>
+          
+  
+          <div style={{ textAlign: "center"}}>
+            <Link to="/projectlist" className="back-button">
+              <Button variant="primary">Back to My Projects</Button>
+            </Link>
+          </div>
+        </Container>
       </Container>
-    </Container>
-  );
+    );
 }
 
 export default ProjectsBackEnd;

@@ -266,7 +266,7 @@ function ProjectsDataViz() {
   return (
     <Container fluid className="project-section">
       <Particle />
-      <Container>
+      <Container fluid className="project-sub-section">
         <h1 className="image-with-text">
           <strong className="purple">Data Processing and Visualization</strong>
           <img src={dataviz_icon} alt="" className="aligned-image" />
@@ -292,8 +292,9 @@ function ProjectsDataViz() {
             );
           })}
         </div>
-
+    
         <Row style={{ justifyContent: "center", paddingBottom: "10px", paddingTop: "20px" }}>
+          {/* Map through the current projects based on pagination */}
           {currentProjects.map((project, index) => (
             <Col md={3} className="project-card" key={index}>
               <ProjectCard
@@ -311,10 +312,9 @@ function ProjectsDataViz() {
             </Col>
           ))}
         </Row>
-
         
 
-        <div style={{ textAlign: "center", marginTop: "30px" }}>
+        <div style={{ textAlign: "center"}}>
           <Link to="/projectlist" className="back-button">
             <Button variant="primary">Back to My Projects</Button>
           </Link>
