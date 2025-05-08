@@ -68,7 +68,6 @@ function ProjectsDataScience() {
     },
   ];
 
-
   // Read page query from URL
   const queryParams = new URLSearchParams(location.search);
   const initialPage = parseInt(queryParams.get("page")) || 1;

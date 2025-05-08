@@ -5,7 +5,6 @@ import {
   SiPostgresql,
   SiStreamlit, 
   SiReact,
-  SiMicrosoftexcel,
 } from "react-icons/si";
 
 import {
@@ -27,12 +26,6 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <Icon icon="devicon-plain:scikitlearn" />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <Icon icon="file-icons:matlab" />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiMicrosoftexcel />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiJavascript1 />

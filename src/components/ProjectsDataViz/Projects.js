@@ -89,7 +89,7 @@ function ProjectsDataViz() {
       title: "RIL (Retrofit Information Letter) Compliance Tracker",
       date: "November 2024",
       description:
-        "Monitors all issued RILs and tracks completion status using Skywise core’s ‘Fusion’ data. Automatically appends new RILs for up-to-date compliance tracking.",
+        "Monitors all issued and upcoming Retrofit Information Letters (RILs), comparing SB accomplishment data with manual status entries by integrating static inputs into dynamic datasets using Palantir Fusion Sheets",
       link: "/project_dataviz/details_14",
       projectType: "airline",
     },

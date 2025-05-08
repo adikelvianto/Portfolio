@@ -4,6 +4,10 @@ import { Icon } from '@iconify/react';
 import {
   SiVisualstudiocode,
   SiPostman,
+  SiNotion,
+  SiPalantir,
+  SiPowerautomate,
+  SiMicrosoftexcel,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 import { DiGit } from "react-icons/di";
@@ -19,10 +23,25 @@ function Toolstack() {
         <Icon icon="devicon-plain:jupyter-wordmark" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
+        <SiMicrosoftexcel/>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiNotion/>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiPalantir/>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
         <Icon icon="simple-icons:powerbi" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <Icon icon="simple-icons:tableau" />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiPowerautomate/>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <Icon icon="file-icons:matlab" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiGit />
