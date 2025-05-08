@@ -666,6 +666,29 @@ button:focus {
   transition: background-color 0.3s ease;
 }
 
+.tech-icons-list {
+  font-size: 1.5em !important;
+  margin-bottom: 5px !important;
+  opacity: 0.93 !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+  border-radius: 0.5px !important;
+  display: table !important;
+  overflow: hidden !important;
+  transition: all 0.4s ease 0s !important;
+}
+
+.button-box-list {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(137, 176, 230, 0.637);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
 .button-box:hover {
   background-color: rgba(70, 118, 185, 0.637);
 }

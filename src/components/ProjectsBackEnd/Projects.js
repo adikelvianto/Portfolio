@@ -6,46 +6,54 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import backend_icon from "../../Assets/Projects/Back End Icon.png";
 
+export const projects = [
+  {
+    title: "ForumAPI – Discussion Platform with Node.js, Hapi, and PostgreSQL",
+    date: "August 2023",
+    hasDemo: false,
+    hasGithub: true,
+    link: "/project_backend/details_1",
+    description:
+      "RESTful API that powers user authentication, threaded discussions, and nested commenting, built with clean architecture and robust error handling.",
+    ghLink: "https://github.com/adikelvianto/ForumAPI",
+    projectType: "personal",
+    num_of_icon:5,
+    icon1:"nodejs",
+    icon2:"postgresql",
+    icon3:"postman",
+    icon4:"aws",
+    icon5:"github",
+  },
+  {
+    title: "OpenMusic API – Music Service with Node.js, RabbitMQ & Redis",
+    date: "July 2023",
+    hasDemo: false,
+    hasGithub: true,
+    link: "/project_backend/details_2",
+    description:
+      "A modular RESTful API for managing music, playlists, and user collaborations—featuring authentication, file uploads, caching with Redis, and background processing using RabbitMQ.",
+    ghLink: "https://github.com/adikelvianto/OpenMusicAPI",
+    projectType: "personal",
+  },
+  {
+    title: "BookShelf API – CRUD Book Management with Node.js & Hapi API",
+    date: "November 2022",
+    hasDemo: false,
+    hasGithub: true,
+    link: "/project_backend/details_3",
+    description:
+      "The BookShelf API is a backend service for managing book collections, offering full CRUD functionality, robust input validation, and clear error handling using Hapi and Node.js.",
+    ghLink: "https://github.com/adikelvianto/BookShelfAPI",
+    projectType: "personal",
+  },
+];
+
 function ProjectsBackEnd() {
 
   const location = useLocation();
   const navigate = useNavigate();
 
-  const projects = [
-    {
-      title: "ForumAPI – Discussion Platform with Node.js, Hapi, and PostgreSQL",
-      date: "August 2023",
-      hasDemo: false,
-      hasGithub: true,
-      link: "/project_backend/details_1",
-      description:
-        "RESTful API that powers user authentication, threaded discussions, and nested commenting, built with clean architecture and robust error handling.",
-      ghLink: "https://github.com/adikelvianto/ForumAPI",
-      projectType: "personal",
-    },
-    {
-      title: "OpenMusic API – Music Service with Node.js, RabbitMQ & Redis",
-      date: "July 2023",
-      hasDemo: false,
-      hasGithub: true,
-      link: "/project_backend/details_2",
-      description:
-        "A modular RESTful API for managing music, playlists, and user collaborations—featuring authentication, file uploads, caching with Redis, and background processing using RabbitMQ.",
-      ghLink: "https://github.com/adikelvianto/OpenMusicAPI",
-      projectType: "personal",
-    },
-    {
-      title: "BookShelf API – CRUD Book Management with Node.js & Hapi API",
-      date: "November 2022",
-      hasDemo: false,
-      hasGithub: true,
-      link: "/project_backend/details_3",
-      description:
-        "The BookShelf API is a backend service for managing book collections, offering full CRUD functionality, robust input validation, and clear error handling using Hapi and Node.js.",
-      ghLink: "https://github.com/adikelvianto/BookShelfAPI",
-      projectType: "personal",
-    },
-  ];
+  
   
   // Read page query from URL
     const queryParams = new URLSearchParams(location.search);
@@ -114,6 +122,12 @@ function ProjectsBackEnd() {
                   demoLink={project.demoLink || ""}
                   ghLink={project.ghLink || ""}
                   projectType={project.projectType}
+                  num_of_icon={project.num_of_icon}
+                  icon1={project.icon1}
+                  icon2={project.icon2}
+                  icon3={project.icon3}
+                  icon4={project.icon4}
+                  icon5={project.icon5}  
                 />
               </Col>
             ))}
