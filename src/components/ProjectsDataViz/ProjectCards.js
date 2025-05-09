@@ -76,7 +76,7 @@ function ProjectCards(props) {
       )}
 
       <Card.Body>
-        <Card.Title className="purple-card">
+        <Card.Title className="purple-card" style={{ marginTop: "20px" }}>
           <strong>{props.title || "Untitled Project"}</strong>
         </Card.Title>
         <Card.Text>{props.date || "No Date Provided"}</Card.Text>

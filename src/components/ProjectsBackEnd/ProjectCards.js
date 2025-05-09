@@ -40,8 +40,7 @@ function ProjectCards(props) {
 
   return (
     <Card className="project-card-view" style={{ position: "relative" }}>
-      {/* Circular icon badge */}
-      {icon && (
+           {icon && (
         <div
           style={{
             position: "absolute",
@@ -64,7 +63,9 @@ function ProjectCards(props) {
       )}
 
       <Card.Body>
-        <Card.Title className="purple-card">
+         {/* Circular icon badge */}
+
+        <Card.Title className="purple-card" style={{ marginTop: "20px" }}>
           <strong>{props.title}</strong>
         </Card.Title>
         <Card.Text>{props.date}</Card.Text>
