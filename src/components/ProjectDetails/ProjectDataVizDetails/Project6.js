@@ -1,23 +1,34 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import { DiPython } from "react-icons/di";
-import { SiStreamlit } from "react-icons/si";
+import { Container } from "react-bootstrap";
+import { projects } from "../../ProjectsDataViz/Projects";
+import { iconMap } from "../../ProjectList/iconMap";
+
 
 function ProjectList() {
+
+  const project  = projects[14];
+    
+      // Build dynamic icon props
+      const iconProps = {};
+      for (let i = 1; i <= project.num_of_icon; i++) {
+        const iconName = project[`icon${i}`];
+        if (iconName && iconMap[iconName]) {
+          iconProps[`icon${i}`] = iconMap[iconName];
+        }
+      }
+
   return (
     <Container fluid className="project-details-section">
     <ProjectCard
-      title="Interactive Analysis of Brazilian E-Commerce with Streamlit Dashboard"
-      date="November 2023"
-      content="loren ipsum"
-      num_of_icon={2}
-      icon1={() => <SiStreamlit />}
-      icon2={() => <DiPython />}
-      hasDemo={true}
-      hasGithub={true}
-      demoLink="https://brazillian-e-commerce.streamlit.app/"
-      ghLink="https://github.com/adikelvianto/Brazilian_E-commerce_Dashboard"      
+      title={project.title}
+      date={project.date}
+      num_of_icon={project.num_of_icon}
+      {...iconProps}
+      hasDemo={project.hasDemo}
+      hasGithub={project.hasGithub}
+      ghLink={project.ghLink}
+      content={``}
    />
    </Container>
   );

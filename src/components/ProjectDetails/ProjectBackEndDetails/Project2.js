@@ -1,16 +1,32 @@
 import React from "react";
 import ProjectCard from "./ProjectCards";
-import { SiPostgresql, SiPostman } from "react-icons/si";
-import { FaAws } from "react-icons/fa";
-import { DiNodejs } from "react-icons/di";
 import { Container } from "react-bootstrap";
+import { projects } from "../../ProjectsBackEnd/Projects";
+import { iconMap } from "../../ProjectList/iconMap";
 
 function ProjectList() {
+
+  const project  = projects[1];
+  
+    // Build dynamic icon props
+    const iconProps = {};
+    for (let i = 1; i <= project.num_of_icon; i++) {
+      const iconName = project[`icon${i}`];
+      if (iconName && iconMap[iconName]) {
+        iconProps[`icon${i}`] = iconMap[iconName];
+      }
+    }
+
   return (
     <Container fluid className="project-details-section">
       <ProjectCard
-        title="OpenMusic API – Music Service with Node.js, RabbitMQ & Redis"
-        date="July 2023"
+        title={project.title}
+        date={project.date}
+        num_of_icon={project.num_of_icon}
+        {...iconProps}
+        hasDemo={project.hasDemo}
+        hasGithub={project.hasGithub}
+        ghLink={project.ghLink}
         content={`
           <p class="project-details-p">The OpenMusic API is a robust backend service designed to manage music albums, songs, playlists, and user collaborations.
            It features secure authentication, file uploads, server-side caching, and asynchronous processing using message queues, all built with a modular and scalable architecture.</p>
@@ -87,14 +103,6 @@ function ProjectList() {
             </tr>
           </table>
         `}
-        num_of_icon={4}
-        icon1={() => <DiNodejs />}
-        icon2={() => <SiPostgresql />}
-        icon3={() => <SiPostman />}
-        icon4={() => <FaAws />}
-        hasDemo={false}
-        hasGithub={true}
-        ghLink="https://github.com/adikelvianto/OpenMusicAPI"
       />
     </Container>
   );

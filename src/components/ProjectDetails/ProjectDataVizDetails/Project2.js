@@ -1,14 +1,33 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import { SiPalantir } from "react-icons/si";
+import { Container } from "react-bootstrap";
+import { projects } from "../../ProjectsDataViz/Projects";
+import { iconMap } from "../../ProjectList/iconMap";
+
 
 function ProjectList() {
+
+  const project  = projects[18];
+    
+      // Build dynamic icon props
+      const iconProps = {};
+      for (let i = 1; i <= project.num_of_icon; i++) {
+        const iconName = project[`icon${i}`];
+        if (iconName && iconMap[iconName]) {
+          iconProps[`icon${i}`] = iconMap[iconName];
+        }
+      }
+
   return (
     <Container fluid className="project-details-section">
     <ProjectCard
-      title="Aircraft Fault & Event Correlation Tracker"
-      date="December 2022"
+      title={project.title}
+      date={project.date}
+      num_of_icon={project.num_of_icon}
+      {...iconProps}
+      hasDemo={project.hasDemo}
+      hasGithub={project.hasGithub}
+      ghLink={project.ghLink}
       content={`
         <p class="project-details-p">
           Built an integrated timeline dashboard combining five aircraft problem datasets—PFRs, AML entries, component removals, delays, and CNRs—using Palantir Contour. Enabled detailed trend and rate analysis to uncover recurring reliability patterns across fleet operations.
@@ -99,8 +118,6 @@ function ProjectList() {
           </tr>
         </table>
       `}
-      num_of_icon={1}
-      icon1={() => <SiPalantir />}      
    />
    </Container>
   );

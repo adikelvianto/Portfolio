@@ -8,6 +8,77 @@ import artjuna from "../../Assets/Projects/artjuna.png";
 import autoland from "../../Assets/Projects/autoland.png";
 import fo_waypoint from "../../Assets/Projects/fo_waypoint.png";
 import datascience_icon from "../../Assets/Projects/Data Science Icon.png";
+import AvPred from "../../Assets/Projects/AvPred.png";
+
+export const projects = [
+  {
+    imgPath: autoland,
+    hasDemo: false,
+    hasGithub: true,
+    title: "Deep Learning-Based Elevator & Throttle Modeling for Boeing 747 Landings",
+    date: "October 2022",
+    description:
+      "Built a deep learning model for Boeing 747 auto-landing using real Flight Data Recorder (FDR) data. Trained separate models for elevator and throttle control to mimic landing behavior. Built with TensorFlow and preprocessed over 300 flight records.",
+    link: "/project_datasci/details_1",
+    ghLink: "https://github.com/adikelvianto/Auto_Landing_DL",
+    projectType: "airline",
+    num_of_icon:2,
+    icon1:"python",
+    icon2:"tensorflow",
+  },
+  {
+    imgPath: fo_waypoint,
+    hasDemo: true,
+    hasGithub: false,
+    title: "Deep Learning-Based Fly-Over Waypoints Control System for Business Jet Aircraft",
+    date: "August 2022",
+    description:
+      "Built a deep learning controller for Cirrus Vision SF50 to follow multiple waypoints using flight data from PID-based missions. Trained with categorized roll-angle data to evaluate how training characteristics affect model performance. Simulated with MATLAB, Simulink, and X-Plane.",
+    link: "/project_datasci/details_2",
+    demoLink: "https://user-images.githubusercontent.com/92104520/196455059-49da6a68-7dc4-442a-bf2d-cf279a6bc297.mp4",
+    projectType: "airline",
+    num_of_icon:3,
+    icon1:"python",
+    icon2:"tensorflow",
+    icon3:"matlab"
+  },
+  {
+    imgPath: artjuna,
+    hasDemo: true,
+    hasGithub: false,
+    title: "Personalized Product Image Generation using a Neural Style Transfer Model",
+    date: "June 2022",
+    description:
+      'Built a Neural Style Transfer model as part of a social e-commerce platform for local artists called "Artjuna". Enabled users to generate personalized product designs by combining their photos with artisan art styles. Trained on ~18k images using TensorFlow.',
+    link: "/project_datasci/details_3",
+    demoLink: "https://adain-demo.streamlit.app/",
+    ghLink: "https://github.com/Artjuna/artjuna-monorepo/tree/main/model/style_transfer",
+    projectType: "personal",
+    num_of_icon:3,
+    icon1:"python",
+    icon2:"tensorflow",
+    icon3:"streamlit"
+  },
+  {
+    imgPath: AvPred,
+    hasDemo: true,
+    hasGithub: false,
+    title: "Web-Based Avionic Subcomponent Failure Prediction Using Machine Learning",
+    date: "January 2022",
+    description:
+      "Developed a prototype website to predict failures of avionics components using real maintenance testing data. Trained models with scikit-learn and deployed via Flask and Streamlit for interactive user access.",
+    link: "/project_datasci/details_4",
+    demoLink: "https://adikelvianto00.pythonanywhere.com/",
+    ghLink: "https://github.com/adikelvianto/Avionic-Components-Failure-Prediction",
+    projectType: "airline",
+    num_of_icon:5,
+    icon1:"python",
+    icon2:"scikitlearn",
+    icon3:"flask",
+    icon4:"javascript",
+    icon5:"streamlit",
+  },
+];
 
 
 function ProjectsDataScience() {
@@ -15,58 +86,7 @@ function ProjectsDataScience() {
   const location = useLocation();
   const navigate = useNavigate();
   
-  const projects = [
-    {
-      imgPath: autoland,
-      hasDemo: false,
-      hasGithub: true,
-      title: "Deep Learning-Based Elevator & Throttle Modeling for Boeing 747 Landings",
-      date: "October 2022",
-      description:
-        "Built a deep learning model for Boeing 747 auto-landing using real Flight Data Recorder (FDR) data. Trained separate models for elevator and throttle control to mimic landing behavior. Built with TensorFlow and preprocessed over 300 flight records.",
-      link: "/project_datasci/details_1",
-      ghLink: "https://github.com/adikelvianto/Auto_Landing_DL",
-      projectType: "airline",
-    },
-    {
-      imgPath: fo_waypoint,
-      hasDemo: true,
-      hasGithub: false,
-      title: "Deep Learning-Based Fly-Over Waypoints Control System for Business Jet Aircraft",
-      date: "August 2022",
-      description:
-        "Built a deep learning controller for Cirrus Vision SF50 to follow multiple waypoints using flight data from PID-based missions. Trained with categorized roll-angle data to evaluate how training characteristics affect model performance. Simulated with MATLAB, Simulink, and X-Plane.",
-      link: "/project_datasci/details_2",
-      demoLink: "https://user-images.githubusercontent.com/92104520/196455059-49da6a68-7dc4-442a-bf2d-cf279a6bc297.mp4",
-      projectType: "airline",
-    },
-    {
-      imgPath: artjuna,
-      hasDemo: true,
-      hasGithub: false,
-      title: "Personalized Product Image Generation using a Neural Style Transfer Model",
-      date: "June 2022",
-      description:
-        'Built a Neural Style Transfer model as part of a social e-commerce platform for local artists called "Artjuna". Enabled users to generate personalized product designs by combining their photos with artisan art styles. Trained on ~18k images using TensorFlow.',
-      link: "/project_datasci/details_3",
-      demoLink: "https://adain-demo.streamlit.app/",
-      ghLink: "https://github.com/Artjuna/artjuna-monorepo/tree/main/model/style_transfer",
-      projectType: "personal",
-    },
-    {
-      imgPath: artjuna,
-      hasDemo: true,
-      hasGithub: false,
-      title: "Web-Based Avionic Subcomponent Failure Prediction Using Machine Learning",
-      date: "January 2022",
-      description:
-        "Developed a prototype website to predict failures of avionics components using real maintenance testing data. Trained models with scikit-learn and deployed via Flask and Streamlit for interactive user access.",
-      link: "/project_datasci/details_4",
-      demoLink: "https://adikelvianto00.pythonanywhere.com/",
-      ghLink: "https://github.com/adikelvianto/Avionic-Components-Failure-Prediction",
-      projectType: "airline",
-    },
-  ];
+
 
   // Read page query from URL
   const queryParams = new URLSearchParams(location.search);
@@ -135,6 +155,12 @@ function ProjectsDataScience() {
                 demoLink={project.demoLink || ""}
                 ghLink={project.ghLink || ""}
                 projectType={project.projectType}
+                num_of_icon={project.num_of_icon}
+                icon1={project.icon1}
+                icon2={project.icon2}
+                icon3={project.icon3}
+                icon4={project.icon4}
+                icon5={project.icon5} 
               />
             </Col>
           ))}

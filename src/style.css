@@ -680,15 +680,16 @@ button:focus {
 
 .button-box-list {
   display: inline-block;
-  padding: 8px 12px;
+  padding: 4px 7px;
   font-size: 20px;
   font-weight: bold;
   color: #fff;
   background-color: rgba(137, 176, 230, 0.637);
-  border-radius: 5px;
+  border-radius: 7px;
   transition: background-color 0.3s ease;
 }
 
+.button-box-list:hover,
 .button-box:hover {
   background-color: rgba(70, 118, 185, 0.637);
 }

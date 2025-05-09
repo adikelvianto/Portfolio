@@ -1,15 +1,33 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import { SiMicrosoftexcel } from "react-icons/si";
+import { Container } from "react-bootstrap";
+import { projects } from "../../ProjectsDataViz/Projects";
+import { iconMap } from "../../ProjectList/iconMap";
 
 
 function ProjectList() {
+
+  const project  = projects[8];
+    
+      // Build dynamic icon props
+      const iconProps = {};
+      for (let i = 1; i <= project.num_of_icon; i++) {
+        const iconName = project[`icon${i}`];
+        if (iconName && iconMap[iconName]) {
+          iconProps[`icon${i}`] = iconMap[iconName];
+        }
+      }
+
   return (
     <Container fluid className="project-details-section">
     <ProjectCard
-      title="Reliability Project Tracking & Accomplishment Dashboard"
-      date="November 2024"
+      title={project.title}
+      date={project.date}
+      num_of_icon={project.num_of_icon}
+      {...iconProps}
+      hasDemo={project.hasDemo}
+      hasGithub={project.hasGithub}
+      ghLink={project.ghLink}
       content={`
         <p class="project-details-p">
           A centralized system providing fleet-wide and project-specific views of reliability initiatives. Displays near real-time material readiness, maintenance status (Last Done – Next Due), and document references, streamlining project monitoring.
@@ -102,12 +120,7 @@ function ProjectList() {
             </td>
           </tr>
         </table>
-      `}      
-      num_of_icon={2}
-      icon1="simple-icons:powerbi"
-      icon2={() => <SiMicrosoftexcel />}
-      hasDemo={false}
-      hasGithub={false}   
+      `}
    />
    </Container>
   );

@@ -1,15 +1,32 @@
 import React from "react";
 import ProjectCard from "./ProjectCards";
-import { DiPython } from "react-icons/di";
-import { SiStreamlit } from "react-icons/si";
 import { Container } from "react-bootstrap";
+import { projects } from "../../ProjectsDataScience/Projects";
+import { iconMap } from "../../ProjectList/iconMap";
 
 function ProjectList() {
+
+  const project  = projects[2];
+    
+      // Build dynamic icon props
+      const iconProps = {};
+      for (let i = 1; i <= project.num_of_icon; i++) {
+        const iconName = project[`icon${i}`];
+        if (iconName && iconMap[iconName]) {
+          iconProps[`icon${i}`] = iconMap[iconName];
+        }
+      }
+
   return (
     <Container fluid className="project-details-section">
       <ProjectCard
-        title="Personalized Product Image Generation using a Neural Style Transfer Model"
-        date="June 2022"
+        title={project.title}
+        date={project.date}
+        num_of_icon={project.num_of_icon}
+        {...iconProps}
+        hasDemo={project.hasDemo}
+        hasGithub={project.hasGithub}
+        ghLink={project.ghLink}
         content={`
           <p class="project-details-p">
             Built a deep learning-based neural style transfer system using AdaIN (Adaptive Instance Normalization) architecture. Combined multiple public datasets for content and style, preprocessed them into TFRecord format, and trained the model locally with GPU optimization to generate artistic images that blend content and style features effectively.
@@ -106,14 +123,6 @@ function ProjectList() {
             </tr>
           </table>    
           `}
-        num_of_icon={3}
-        icon1={() => <DiPython />}
-        icon2="cib:tensorflow"
-        icon3={() => <SiStreamlit />}
-        hasDemo={true}
-        hasGithub={true}
-        ghLink="https://github.com/Artjuna/artjuna-monorepo/tree/main/model/style_transfer"
-        demoLink="https://adain-demo.streamlit.app/"
       />
     </Container>
   );

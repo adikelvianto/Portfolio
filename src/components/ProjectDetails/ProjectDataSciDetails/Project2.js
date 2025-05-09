@@ -1,14 +1,32 @@
 import React from "react";
 import ProjectCard from "./ProjectCards";
-import { DiPython } from "react-icons/di";
 import { Container } from "react-bootstrap";
+import { projects } from "../../ProjectsDataScience/Projects";
+import { iconMap } from "../../ProjectList/iconMap";
 
 function ProjectList() {
+
+  const project  = projects[1];
+    
+      // Build dynamic icon props
+      const iconProps = {};
+      for (let i = 1; i <= project.num_of_icon; i++) {
+        const iconName = project[`icon${i}`];
+        if (iconName && iconMap[iconName]) {
+          iconProps[`icon${i}`] = iconMap[iconName];
+        }
+      }
+
   return (
     <Container fluid className="project-details-section">
       <ProjectCard
-        title="Deep Learning-Based Fly-Over Waypoints Control System for Business Jet Aircraft"
-        date="August 2022"
+        title={project.title}
+        date={project.date}
+        num_of_icon={project.num_of_icon}
+        {...iconProps}
+        hasDemo={project.hasDemo}
+        hasGithub={project.hasGithub}
+        ghLink={project.ghLink}
         content={`
           <p class="project-details-p">
           Developed a deep learning-based waypoint-following controller focused on *fly-over waypoints* for the Cirrus Vision SF50 business jet. This project compared Deep Learning against PID control and investigated how training data characteristics — especially aircraft roll angle — affect model performance.
@@ -118,13 +136,6 @@ function ProjectList() {
             </tr>
           </table>
           `}
-        num_of_icon={3}
-        icon1={() => <DiPython />}
-        icon2="cib:tensorflow"
-        icon3="file-icons:matlab"
-        hasDemo={false}
-        hasGithub={true}
-        ghLink="https://github.com/adikelvianto/Fly-Over_Waypoints_DL"
       />
     </Container>
   );

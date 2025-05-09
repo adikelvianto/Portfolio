@@ -1,14 +1,33 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import { SiPalantir } from "react-icons/si";
+import { Container } from "react-bootstrap";
+import { projects } from "../../ProjectsDataViz/Projects";
+import { iconMap } from "../../ProjectList/iconMap";
+
 
 function ProjectList() {
+
+  const project  = projects[1];
+    
+      // Build dynamic icon props
+      const iconProps = {};
+      for (let i = 1; i <= project.num_of_icon; i++) {
+        const iconName = project[`icon${i}`];
+        if (iconName && iconMap[iconName]) {
+          iconProps[`icon${i}`] = iconMap[iconName];
+        }
+      }
+
   return (
     <Container fluid className="project-details-section">
     <ProjectCard
-      title="APU Trend Insight"
-      date="April 2025"
+      title={project.title}
+      date={project.date}
+      num_of_icon={project.num_of_icon}
+      {...iconProps}
+      hasDemo={project.hasDemo}
+      hasGithub={project.hasGithub}
+      ghLink={project.ghLink}
       content={`
         <p class="project-details-p">
           Visualizes trends from APU idle and auto shutdown ACMS reports by plotting key parameters to help identify early signs of system degradation or anomalies. 
@@ -95,17 +114,12 @@ function ProjectList() {
               <h2>📚 Lessons Learned</h2>
               <ul>
                 <li>Binary-level control word decoding reveals operational logic embedded in raw data</li>
-                <li>Parameter offset alignment is critical for building accurate time-based trend insights</li>
                 <li>Consistent preprocessing across data sources is key to building scalable visualizations</li>
               </ul>
             </td>
           </tr>
         </table>
       `}
-      num_of_icon={1}
-      icon1={() => <SiPalantir />}
-      hasDemo={false}
-      hasGithub={false}
    />
    </Container>
   );

@@ -1,14 +1,33 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import { SiPalantir } from "react-icons/si";
+import { Container } from "react-bootstrap";
+import { projects } from "../../ProjectsDataViz/Projects";
+import { iconMap } from "../../ProjectList/iconMap";
+
 
 function ProjectList() {
+
+  const project  = projects[9];
+    
+      // Build dynamic icon props
+      const iconProps = {};
+      for (let i = 1; i <= project.num_of_icon; i++) {
+        const iconName = project[`icon${i}`];
+        if (iconName && iconMap[iconName]) {
+          iconProps[`icon${i}`] = iconMap[iconName];
+        }
+      }
+
   return (
     <Container fluid className="project-details-section">
     <ProjectCard
-      title="Engine Reliability Trend Dashboard"
-      date="October 2024"
+      title={project.title}
+      date={project.date}
+      num_of_icon={project.num_of_icon}
+      {...iconProps}
+      hasDemo={project.hasDemo}
+      hasGithub={project.hasGithub}
+      ghLink={project.ghLink}
       content={`
         <p class="project-details-p">
           Tracks monthly trends of engine-related reliability issues—such as PFRs, AMLs, delays, engine removals/installations, and CNRs—across the fleet. 
@@ -101,11 +120,7 @@ function ProjectList() {
             </td>
           </tr>
         </table>
-      `} 
-      num_of_icon={1}
-      icon1={() => <SiPalantir />}
-      hasDemo={false}
-      hasGithub={false}   
+      `}
    />
    </Container>
   );

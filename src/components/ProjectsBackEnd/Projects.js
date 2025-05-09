@@ -34,6 +34,11 @@ export const projects = [
       "A modular RESTful API for managing music, playlists, and user collaborations—featuring authentication, file uploads, caching with Redis, and background processing using RabbitMQ.",
     ghLink: "https://github.com/adikelvianto/OpenMusicAPI",
     projectType: "personal",
+    num_of_icon:4,
+    icon1:"nodejs",
+    icon2:"postgresql",
+    icon3:"postman",
+    icon4:"aws",
   },
   {
     title: "BookShelf API – CRUD Book Management with Node.js & Hapi API",
@@ -45,6 +50,9 @@ export const projects = [
       "The BookShelf API is a backend service for managing book collections, offering full CRUD functionality, robust input validation, and clear error handling using Hapi and Node.js.",
     ghLink: "https://github.com/adikelvianto/BookShelfAPI",
     projectType: "personal",
+    num_of_icon:2,
+    icon1:"nodejs",
+    icon2:"postman",
   },
 ];
 
@@ -132,8 +140,6 @@ function ProjectsBackEnd() {
               </Col>
             ))}
           </Row>
-          
-  
           <div style={{ textAlign: "center"}}>
             <Link to="/projectlist" className="back-button">
               <Button variant="primary">Back to My Projects</Button>

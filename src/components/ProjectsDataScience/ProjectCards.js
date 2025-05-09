@@ -5,6 +5,9 @@ import { BiPlayCircle } from "react-icons/bi";
 import { BsGithub, BsInfoCircle, BsPersonCircle } from "react-icons/bs";
 import { FaPlane } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Row, Col } from "react-bootstrap";
+import { iconMap } from "../ProjectList/iconMap";
+
 
 function ProjectCards(props) {
   // Determine icon based on project type
@@ -14,6 +17,26 @@ function ProjectCards(props) {
     ) : props.projectType === "personal" ? (
       <BsPersonCircle />
     ) : null;
+
+   //  Techstack Icons
+   const iconCols = [];
+
+   for (let i = 1; i <= props.num_of_icon; i++) {
+     const iconKey = props[`icon${i}`];
+     const IconComponent = iconMap[iconKey];
+   
+     if (IconComponent) {
+       iconCols.push(
+         <Col key={i} xs={4} md={1} className="tech-icons-list">
+           <div className="button-box-list">
+             {typeof IconComponent === "function" ? <IconComponent /> : IconComponent}
+           </div>
+         </Col>
+       );
+     }
+   }
+   
+
 
   return (
     <Card className="project-card-view" style={{ position: "relative" }}>
@@ -46,7 +69,9 @@ function ProjectCards(props) {
           <strong>{props.title}</strong>
         </Card.Title>
         <Card.Text>{props.date}</Card.Text>
-        <br />
+        <Row style={{ justifyContent: "center", paddingBottom: "25px"}}>
+            {iconCols}
+        </Row>
         <Card.Text style={{ textAlign: "justify" }}>
           {props.description}
         </Card.Text>

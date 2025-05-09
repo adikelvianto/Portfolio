@@ -14,23 +14,14 @@ import {
   DiGit,
   DiJavascript1,
   DiNodejs,
-  DiPython
+  DiPython,
+  DiMsqlServer
 } from "react-icons/di";
-import { FaAws } from "react-icons/fa";
+import { 
+  FaAws,
+  FaPhp 
+} from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
-
-// These use Iconify (via <Icon icon="..." />)
-const iconifyIcons = {
-    jupyter: "devicon-plain:jupyter-wordmark",
-    powerbi: "simple-icons:powerbi",
-    tableau: "simple-icons:tableau",
-    matlab: "file-icons:matlab",
-    tensorflow: "cib:tensorflow",
-    scikitlearn: "devicon-plain:scikitlearn",
-    flask: "bxl:flask",
-    r: "cib:r"
-  };
-  
 
 export const iconMap = {
     visualstudiocode: SiVisualstudiocode,
@@ -48,6 +39,8 @@ export const iconMap = {
     python: DiPython,
     aws: FaAws,
     github: AiFillGithub,
+    php: FaPhp,
+    sqlserver: DiMsqlServer,
     jupyter: () => <Icon icon="devicon-plain:jupyter-wordmark" />,
     powerbi: () => <Icon icon="simple-icons:powerbi" />,
     tableau: () => <Icon icon="simple-icons:tableau" />,

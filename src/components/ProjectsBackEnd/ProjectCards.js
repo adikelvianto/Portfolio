@@ -6,7 +6,6 @@ import { BsGithub, BsInfoCircle, BsPersonCircle } from "react-icons/bs";
 import { FaPlane } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Row, Col } from "react-bootstrap";
-import { Icon } from '@iconify/react';
 import { iconMap } from "../ProjectList/iconMap";
 
 
@@ -23,8 +22,8 @@ function ProjectCards(props) {
    const iconCols = [];
 
    for (let i = 1; i <= props.num_of_icon; i++) {
-     const iconKey = props[`icon${i}`]; // e.g., "react", "jupyter"
-     const IconComponent = iconMap[iconKey]; // This can be a React component or a function returning JSX
+     const iconKey = props[`icon${i}`];
+     const IconComponent = iconMap[iconKey];
    
      if (IconComponent) {
        iconCols.push(
@@ -69,8 +68,7 @@ function ProjectCards(props) {
           <strong>{props.title}</strong>
         </Card.Title>
         <Card.Text>{props.date}</Card.Text>
-        <br />
-        <Row style={{ justifyContent: "center", paddingBottom: "10px"}}>
+        <Row style={{ justifyContent: "center", paddingBottom: "25px"}}>
             {iconCols}
         </Row>
         <Card.Text style={{ textAlign: "justify" }}>

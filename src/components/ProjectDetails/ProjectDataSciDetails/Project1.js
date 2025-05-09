@@ -1,14 +1,32 @@
 import React from "react";
 import ProjectCard from "./ProjectCards";
-import { DiPython } from "react-icons/di";
 import { Container } from "react-bootstrap";
+import { projects } from "../../ProjectsDataScience/Projects";
+import { iconMap } from "../../ProjectList/iconMap";
 
 function ProjectList() {
+
+  const project  = projects[0];
+    
+      // Build dynamic icon props
+      const iconProps = {};
+      for (let i = 1; i <= project.num_of_icon; i++) {
+        const iconName = project[`icon${i}`];
+        if (iconName && iconMap[iconName]) {
+          iconProps[`icon${i}`] = iconMap[iconName];
+        }
+      }
+
   return (
     <Container fluid className="project-details-section">
       <ProjectCard
-        title="Deep Learning-Based Elevator & Throttle Modeling for Boeing 747 Landings"
-        date="October 2022"
+        title={project.title}
+        date={project.date}
+        num_of_icon={project.num_of_icon}
+        {...iconProps}
+        hasDemo={project.hasDemo}
+        hasGithub={project.hasGithub}
+        ghLink={project.ghLink}
         content={`<p class="project-details-p">
           Developed a deep learning-based auto-landing system for Boeing 747 aircraft using real-world flight data. Created two models to control elevator and throttle inputs during the landing phase, trained using TensorFlow on FDR (Flight Data Recorder) datasets.
           </p>
@@ -105,12 +123,6 @@ function ProjectList() {
             </tr>
           </table>
           `}
-        num_of_icon={2}
-        icon1={() => <DiPython />}
-        icon2="cib:tensorflow"
-        hasDemo={false}
-        hasGithub={true}
-        ghLink="https://github.com/adikelvianto/Auto_Landing_DL"
       />
     </Container>
   );

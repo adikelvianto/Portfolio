@@ -1,15 +1,32 @@
 import React from "react";
 import ProjectCard from "./ProjectCards";
-import { DiPython, DiJavascript1 } from "react-icons/di";
-import { SiStreamlit } from "react-icons/si";
 import { Container } from "react-bootstrap";
+import { projects } from "../../ProjectsDataScience/Projects";
+import { iconMap } from "../../ProjectList/iconMap";
 
 function ProjectList() {
+
+  const project  = projects[3];
+    
+      // Build dynamic icon props
+      const iconProps = {};
+      for (let i = 1; i <= project.num_of_icon; i++) {
+        const iconName = project[`icon${i}`];
+        if (iconName && iconMap[iconName]) {
+          iconProps[`icon${i}`] = iconMap[iconName];
+        }
+      }
+
   return (
     <Container fluid className="project-details-section">
       <ProjectCard
-        title="Web-Based Avionic Subcomponent Failure Prediction Using Machine Learning"
-        date="January 2022"
+        title={project.title}
+        date={project.date}
+        num_of_icon={project.num_of_icon}
+        {...iconProps}
+        hasDemo={project.hasDemo}
+        hasGithub={project.hasGithub}
+        ghLink={project.ghLink}
         content={`
           <p class="project-details-p">
           Developed a prototype website to predict the failure of avionic components—VOR and Multimode Control Panel—during a 4-month internship at PT. GMF Aeroasia Tbk. The project combines machine learning models trained with scikit-learn and a Flask-based frontend hosted on PythonAnywhere and Streamlit Cloud.
@@ -109,16 +126,6 @@ function ProjectList() {
           </tr>
         </table>
         `}
-        num_of_icon={5}
-        icon1={() => <DiPython />}
-        icon2="devicon-plain:scikitlearn"
-        icon3="bxl:flask"
-        icon4={() => <DiJavascript1 />}
-        icon5={() => <SiStreamlit />}
-        hasDemo={true}
-        hasGithub={true}
-        ghLink="https://github.com/adikelvianto/Avionic-Components-Failure-Prediction"
-        demoLink="https://adikelvianto00.pythonanywhere.com/"
       />
     </Container>
   );

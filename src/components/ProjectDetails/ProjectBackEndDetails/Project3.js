@@ -1,15 +1,32 @@
 import React from "react";
 import ProjectCard from "./ProjectCards";
-import { SiPostman } from "react-icons/si";
-import { DiNodejs } from "react-icons/di";
 import { Container } from "react-bootstrap";
+import { projects } from "../../ProjectsBackEnd/Projects";
+import { iconMap } from "../../ProjectList/iconMap";
 
 function ProjectList() {
+
+  const project  = projects[1];
+    
+      // Build dynamic icon props
+      const iconProps = {};
+      for (let i = 1; i <= project.num_of_icon; i++) {
+        const iconName = project[`icon${i}`];
+        if (iconName && iconMap[iconName]) {
+          iconProps[`icon${i}`] = iconMap[iconName];
+        }
+      }
+
   return (
     <Container fluid className="project-details-section">
       <ProjectCard
-        title="BookShelf API – CRUD Book Management with Node.js & Hapi API"
-        date="November 2022"
+        title={project.title}
+        date={project.date}
+        num_of_icon={project.num_of_icon}
+        {...iconProps}
+        hasDemo={project.hasDemo}
+        hasGithub={project.hasGithub}
+        ghLink={project.ghLink}
         content= {`
           <p class="project-details-p">The BookShelf API is a backend service that allows users to manage a personal digital library. It provides a clean and secure RESTful interface for creating, retrieving, updating, and deleting book entries, built with Hapi and Node.js using clear validation and structured response handling.</p>
 
@@ -79,12 +96,6 @@ function ProjectList() {
             </tr>
           </table>
           `}
-        num_of_icon={2}
-        icon1={() => <DiNodejs />}
-        icon2={() => <SiPostman />}
-        hasDemo={false}
-        hasGithub={true}
-        ghLink="https://github.com/adikelvianto/BookShelfAPI"
       />
     </Container>
   );
