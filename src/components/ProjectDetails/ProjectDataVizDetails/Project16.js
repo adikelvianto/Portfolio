@@ -71,7 +71,7 @@ function ProjectList() {
               <h2>👨‍💻 My Responsibilities</h2>
               <ul>
                 <li>Developed the full ETL pipeline using SharePoint folder connections and Power BI transformations</li>
-                <li>Built the dashboard UI with toggle views for YTD vs. last-12-months, and created drillthrough navigation to detailed delay cases</li>
+                <li>Designed the dashboard UI with toggle views for Year-to-Date (YTD) and custom time range filters, and implemented drill-through navigation to detailed delay case views</li>
                 <li>Created delay program follow-up interface to show status, progress, and accountability</li>
                 <li>Performed regular monthly updates by collecting, processing, and integrating data from multiple manual report sources</li>
               </ul>
