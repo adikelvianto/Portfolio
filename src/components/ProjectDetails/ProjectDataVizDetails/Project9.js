@@ -30,7 +30,7 @@ function ProjectList() {
       ghLink={project.ghLink}
       content={`
         <p class="project-details-p">
-          Summarizes vibration-triggered ACMS advisories (N1/N2-based) for both sensors (Fan and TRF) across the fleet. 
+          Summarizes vibration-triggered Aircraft Condition Monitoring System (ACMS) advisories (N1/N2-based) for both sensors (Fan and TRF) across the fleet. 
           Helps powerplant engineering teams monitor and take early action on potential engine imbalance or mechanical deterioration.
         </p>
       

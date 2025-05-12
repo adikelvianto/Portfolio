@@ -45,19 +45,12 @@ function ProjectCards(props) {
       </h1>
       <div className="project-details-subheading">{props.date}</div>
 
-      <Row
-        style={{
-          justifyContent: "center",
-          paddingBottom: "5px",
-          maxWidth: "400px",
-          margin: "0 auto",
-        }}
-      >
+      <Row style={{ justifyContent: "center", paddingBottom: "5px", maxWidth: "400px", margin: "0 auto" }}>
         {iconCols}
       </Row>
 
       <div
-        style={{ color: "white" }}
+        style={{ color: "white", position: "relative", zIndex: 2}}
         dangerouslySetInnerHTML={{ __html: props.content }}
       ></div>
 

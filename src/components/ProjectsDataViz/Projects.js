@@ -27,7 +27,7 @@ export const projects = [
   {
     hasDemo: false,
     hasGithub: false,
-    title: "APU Trend Insight",
+    title: "Auxiliary Power Unit (APU) Trend Insight",
     date: "April 2025",
     description:
       "Visualizes trends from APU idle and auto shutdown ACMS reports by plotting key parameters to help identify early signs of system degradation or anomalies. Simplifies trend interpretation for engineering teams through clear parameter-based insights.",
@@ -45,9 +45,10 @@ export const projects = [
       "Provides high-level visibility into the overall maintenance execution timeline and cost tracking for engines, APUs, airframes, and landing gears. Features monthly shop visit progress against ideal plans, revision history, event summaries, and a financial view comparing planned budgets versus actual payments — all tailored for executive decision-making.",
     link: "/project_dataviz/details_18",
     projectType: "airline",
-    num_of_icon:2,
+    num_of_icon:3,
     icon1:"powerbi",
     icon2:"microsoftexcel",
+    icon3:"powerautomate",
   },
   {
     hasDemo: false,
@@ -80,7 +81,7 @@ export const projects = [
     title: "Daily Engine Oil Consumption Monitoring Tool",
     date: "December 2024",
     description:
-      "Processes QAR data to calculate and visualize daily oil consumption per engine, enabling detection of unusual trends and early maintenance action.",
+      "Processes Quick Access Recorder (QAR) data to calculate and visualize daily oil consumption per engine, enabling detection of unusual trends and early maintenance action.",
     link: "/project_dataviz/details_15",
     projectType: "airline",
     num_of_icon:1,
@@ -129,7 +130,7 @@ export const projects = [
     title: "Engine Reliability Trend Dashboard",
     date: "October 2024",
     description:
-      "Tracks monthly trends of engine-related reliability issues including PFRs, AMLs, delays, and CNRs. Offers a consolidated 3-month snapshot to highlight recurring problems and support engineering decision-making.",
+      "Tracks monthly trends of engine-related reliability issues including Post Flight Report (PFR), Aircraft Maintenance Log (AML), delays, and Customer Notification Report (CNR). Offers a consolidated 3-month snapshot to highlight recurring problems and support engineering decision-making.",
     link: "/project_dataviz/details_11",
     projectType: "airline",
     num_of_icon:1,
@@ -141,7 +142,7 @@ export const projects = [
     title: "Airframe Reliability Trend Dashboard",
     date: "October 2024",
     description:
-      "Tracks monthly trends of airframe-related reliability issues including PFRs, AMLs, and delays. Consolidates the last 3 months into a single view to highlight recurring issues and support engineering assessments.",
+      "Tracks monthly trends of airframe-related reliability issues including Post Flight Report (PFR), Aircraft Maintenance Log (AML), and delays. Consolidates the last 3 months into a single view to highlight recurring issues and support engineering assessments.",
     link: "/project_dataviz/details_10",
     projectType: "airline",
     num_of_icon:1,
@@ -153,7 +154,7 @@ export const projects = [
     title: "ACMS Mechanical Advisory Summary Board",
     date: "May 2024",
     description:
-      "Summarizes vibration-triggered ACMS advisories (N1/N2-based) across the fleet, helping engineering teams monitor and act on potential engine imbalance or mechanical deterioration.",
+      "Summarizes vibration-triggered Aircraft Condition Monitoring System (ACMS) advisories (N1/N2-based) across the fleet, helping engineering teams monitor and act on potential engine imbalance or mechanical deterioration.",
     link: "/project_dataviz/details_9",
     projectType: "airline",
     num_of_icon:1,
@@ -165,7 +166,7 @@ export const projects = [
     title: "Quick Analysis Template for Engine Time Series Data",
     date: "May 2024",
     description:
-      "Provides two versions of preprocessing templates for aircraft equipped with QAR or DAR systems. Includes preselected engine parameters (e.g., vibration levels, rotational speeds, flight phases) to accelerate engine data analysis and enable fast anomaly detection",
+      "Provides two versions of preprocessing templates for aircraft equipped with Quick Access Recorder (QAR) or Digital AIDS Recoderd (DAR) systems. Includes preselected engine parameters (e.g., vibration levels, rotational speeds, flight phases) to accelerate engine data analysis and enable fast anomaly detection",
     link: "/project_dataviz/details_8",
     projectType: "airline",
     num_of_icon:1,
@@ -205,7 +206,7 @@ export const projects = [
     title: "Engine Health Index – Sick Engine Monitoring Tool",
     date: "October 2023",
     description:
-      "Ranks engines based on issue severity using a weighted index combining Skywise data (PFR, AML, HIL, delays) and manual inputs (CNRs, powerplant monitoring data). Automatic report generation provides engineering teams with targeted engine health insights.",
+      "Ranks engines based on issue severity using a weighted index combining Skywise data (Post Flight Report (PFR), Aircraft Maintenance Log (AML), Hold Item List (HIL), delays) and manual inputs (Customer Notification Report (CNR), powerplant monitoring data). Automatic report generation provides engineering teams with targeted engine health insights.",
     link: "/project_dataviz/details_5",
     projectType: "airline",
     num_of_icon:1,
@@ -217,7 +218,7 @@ export const projects = [
     title: "Aircraft Health Index – Sick Aircraft Monitoring Tool",
     date: "September 2023",
     description:
-      "Ranks aircraft based on issue severity using a weighted index derived from Skywise core data (PFR, AML, HIL, delays) and manual inputs (CNR). Automatic report generation delivers engineering insights for prioritized aircraft health management.",
+      "Ranks aircraft based on issue severity using a weighted index derived from Skywise core data (Post Flight Report (PFR), Aircraft Maintenance Log (AML), Hold Item List (HIL), delays) and manual inputs Customer Notification Report (CNR). Automatic report generation delivers engineering insights for prioritized aircraft health management.",
     link: "/project_dataviz/details_4",
     projectType: "airline",
     num_of_icon:1,
@@ -230,7 +231,7 @@ export const projects = [
     title: "Component Lifecycle & Tracking System",
     date: "December 2022",
     description:
-      "Maps each component’s journey—from removal to reinstallation—along with part number associations, TFU/ISI documentation, and related maintenance activity to support traceability and reliability evaluation",
+      "Maps each component’s journey—from removal to reinstallation—along with part number associations, Technical Follow Up (TFU)/In-Service Information (ISI) documentation, and related maintenance activity to support traceability and reliability evaluation",
     link: "/project_dataviz/details_3",
     projectType: "airline",
     num_of_icon:1,
@@ -243,7 +244,7 @@ export const projects = [
     title: "Aircraft Fault & Event Correlation Tracker",
     date: "December 2022",
     description:
-      "Combines historical PFRs, AML entries, component removals, delays, and CNRs into a synchronized timeline per aircraft. Features monthly trend analysis and occurrence rates to identify reliability patterns.",
+      "Combines historical Post Flight Report (PFR), Aircraft Maintenance Log (AML) entries, component removals, delays, and Customer Notification Report (CNR) into a synchronized timeline per aircraft. Features monthly trend analysis and occurrence rates to identify reliability patterns.",
     link: "/project_dataviz/details_2",
     projectType: "airline",
     num_of_icon:1,
